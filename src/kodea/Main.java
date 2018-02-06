@@ -1,4 +1,4 @@
-package Kodea;
+package kodea;
 
 import interfazeak.UIModua;
 
