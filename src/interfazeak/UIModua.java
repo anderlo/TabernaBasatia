@@ -43,7 +43,7 @@ public class UIModua extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Normala normala = Normala.getNormala();
-				normala.hasieratu();
+				normala.main(null);
 				uiModua.dispose();
 			}
 		});
@@ -54,7 +54,7 @@ public class UIModua extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Konpetitiboa konpetitiboa = Konpetitiboa.getKonpetitiboa();
-				konpetitiboa.hasieratu();
+				konpetitiboa.main(null);
 				uiModua.dispose();
 			}
 		});
