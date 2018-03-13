@@ -1,6 +1,9 @@
 package interfazeak;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -10,13 +13,22 @@ import javax.swing.JButton;
 public class UIModua extends JFrame {
 
 	private JPanel contentPane;
+	private static UIModua uiModua = null;
+	
 	public static void main(String[] args) {
-		new UIModua();
+		UIModua.getUIModua();
 	}
+	
+	public static UIModua getUIModua() {
+		if (uiModua==null) {
+			uiModua=new UIModua();
+		}
+		return uiModua;
+	}
+	
 	public UIModua() {
-		setBounds(800, 400, 440, 150);
+		setBounds(800, 400, 191, 238);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setResizable(false);
 		
 		contentPane = 	new JPanel();
 		JPanel panela = 	new JPanel();
@@ -27,9 +39,26 @@ public class UIModua extends JFrame {
 
 		
 		JButton btnModuNormala = new JButton("Modu normala");
-		panela.add(btnModuNormala);
+		btnModuNormala.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Normala normala = Normala.getNormala();
+				normala.hasieratu();
+				uiModua.dispose();
+			}
+		});
 		
 		JButton btnModuKonpetitiboa = new JButton("Modu konpetitiboa");
+		btnModuKonpetitiboa.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Konpetitiboa konpetitiboa = Konpetitiboa.getKonpetitiboa();
+				konpetitiboa.hasieratu();
+				uiModua.dispose();
+			}
+		});
+		panela.add(btnModuNormala);
 		panela.add(btnModuKonpetitiboa);
 		
 		contentPane.add(panela);
