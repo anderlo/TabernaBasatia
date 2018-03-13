@@ -7,9 +7,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class Normala extends JFrame {
-	private static Normala nNormala = null;
+public class Jokoa extends JFrame {
+	private static Jokoa nNormala = null;
 	private JPanel contentPane;
+	private Karta[] jokalariarenEskua;
+	private Karta[] ordenagailuarenEskua;
 
 	/**
 	 * Launch the application.
@@ -18,7 +20,7 @@ public class Normala extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Normala frame = new Normala();
+					Jokoa frame = new Jokoa();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -27,9 +29,9 @@ public class Normala extends JFrame {
 		});
 	}
 	
-	public static Normala getNormala() {
+	public static Jokoa getNormala() {
 		if (nNormala == null) {
-			nNormala = new Normala();
+			nNormala = new Jokoa();
 		}
 		return nNormala;
 	}
@@ -37,7 +39,7 @@ public class Normala extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	private Normala() {
+	private Jokoa() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

@@ -42,8 +42,8 @@ public class UIModua extends JFrame {
 		btnModuNormala.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Normala normala = Normala.getNormala();
-				normala.main(null);
+				Jokoa jokoa = Jokoa.getNormala();
+				jokoa.main(null);
 				uiModua.dispose();
 			}
 		});
