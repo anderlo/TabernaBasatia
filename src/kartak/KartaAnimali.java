@@ -11,4 +11,7 @@ public class KartaAnimali extends Karta{
 		this.path			= null;
 		this.errekurrentea 	= false;
 	}	
+	public int animaliZenbakia() {
+		return this.zenbakia;
+	}
 }

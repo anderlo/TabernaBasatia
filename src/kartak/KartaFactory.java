@@ -9,19 +9,9 @@ public class KartaFactory {
 	 if (nKartaFactory == null) {nKartaFactory = new KartaFactory();}
 	return nKartaFactory;
 	}
-	public ListaKartak createListak (String kolore){
-		ListaKartak kartak	= new ListaKartak();
-		Karta	    karta 	= null;
-		if ((kolore=="urdina")&&(kolore=="berdea")) {
-			for (int i = 1; i < 13; i++) {
-				karta = this.createKarta(kolore,i);
-				kartak.add(karta);
-			}
-		}
-		return kartak;
-	}
-	public Karta createKarta (String kolore,Integer zenbakia) {
-		Karta karta = null;
+
+	public KartaAnimali createKarta (String kolore,Integer zenbakia) {
+		KartaAnimali karta = null;
 		switch (zenbakia) {
 		case 1:
 			karta = new Mofeta(kolore,zenbakia);
@@ -62,8 +52,8 @@ public class KartaFactory {
 		}
 		return karta;
 	}
-	public Karta createKarta (String izena) {
-		Karta karta = null;
+	public KartaBerezia createKarta (String izena) {
+		KartaBerezia karta = null;
 		if ((izena=="ostikada") || (izena=="Ostikada")){
 			karta = new Ostikada();
 		}
