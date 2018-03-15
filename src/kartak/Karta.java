@@ -1,6 +1,10 @@
 package kartak;
 
 public abstract class Karta {
-	private String izena;
-	private String path;
+	protected String izena;
+	protected String path;
+	protected abstract void setPath();
+	public String getPath() {
+		return this.path;
+	}
 }

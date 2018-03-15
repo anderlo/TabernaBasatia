@@ -9,7 +9,6 @@ public class KartaFactory {
 	 if (nKartaFactory == null) {nKartaFactory = new KartaFactory();}
 	return nKartaFactory;
 	}
-
 	public KartaAnimali createKarta (String kolore,Integer zenbakia) {
 		KartaAnimali karta = null;
 		switch (zenbakia) {
