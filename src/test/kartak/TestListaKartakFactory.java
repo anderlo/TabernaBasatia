@@ -16,6 +16,7 @@ class TestListaKartakFactory {
 
 	@Test
 	final void testCreateListak() {
+		//TestKartaFactory ondo dagoela dakigunez ez dugu kartaz karta joan behar
 		ListaKartak kartakBerdea = new ListaKartak();
 		kartakBerdea = ListaKartakFactory.getListaKartaFactory().createListak("Berdea");
 		ListaKartak kartakUrdina = new ListaKartak();
