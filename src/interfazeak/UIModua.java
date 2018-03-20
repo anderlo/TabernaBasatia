@@ -53,8 +53,8 @@ public class UIModua extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Konpetitiboa konpetitiboa = Konpetitiboa.getKonpetitiboa();
-				konpetitiboa.main(null);
+				UIKonpetitiboa uIKonpetitiboa = UIKonpetitiboa.getKonpetitiboa();
+				uIKonpetitiboa.main(null);
 				uiModua.dispose();
 			}
 		});

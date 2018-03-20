@@ -5,7 +5,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 
-public class Karta extends JButton implements MouseListener {
+public class UIKarta extends JButton implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent e) {

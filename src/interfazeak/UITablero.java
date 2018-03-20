@@ -10,8 +10,8 @@ import javax.swing.border.EmptyBorder;
 public class UITablero extends JFrame {
 	private static UITablero nNormala = null;
 	private JPanel contentPane;
-	private Karta[] jokalariarenEskua;
-	private Karta[] ordenagailuarenEskua;
+	private UIKarta[] jokalariarenEskua;
+	private UIKarta[] ordenagailuarenEskua;
 
 	/**
 	 * Launch the application.
