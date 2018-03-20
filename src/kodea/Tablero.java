@@ -21,4 +21,12 @@ public class Tablero {
 		this.ostikada 	= (Ostikada) KartaFactory.getKartaFactory().createKarta("Ostikada");
 		this.zerukoatea 	= (ZerukoAtea) KartaFactory.getKartaFactory().createKarta("ZerukoAtea");
 	}
+	public void kokatuBerezia(Ostikada karta) {
+		// TODO Auto-generated method stub
+		this.ostikada = karta;
+	}
+	public void kokatuBerezia(ZerukoAtea karta) {
+		// TODO Auto-generated method stub
+		this.zerukoatea = karta;
+	}
 }

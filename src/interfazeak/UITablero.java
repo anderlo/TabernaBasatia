@@ -7,8 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class Jokoa extends JFrame {
-	private static Jokoa nNormala = null;
+public class UITablero extends JFrame {
+	private static UITablero nNormala = null;
 	private JPanel contentPane;
 	private Karta[] jokalariarenEskua;
 	private Karta[] ordenagailuarenEskua;
@@ -20,7 +20,7 @@ public class Jokoa extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Jokoa frame = new Jokoa();
+					UITablero frame = new UITablero();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -29,9 +29,9 @@ public class Jokoa extends JFrame {
 		});
 	}
 	
-	public static Jokoa getNormala() {
+	public static UITablero getNormala() {
 		if (nNormala == null) {
-			nNormala = new Jokoa();
+			nNormala = new UITablero();
 		}
 		return nNormala;
 	}
@@ -39,7 +39,7 @@ public class Jokoa extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	private Jokoa() {
+	private UITablero() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -47,7 +47,6 @@ public class Jokoa extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 	}
-	
 	
 
 }
