@@ -7,20 +7,18 @@ public  class Main {
 	public Main() {
 		//crear los dos jugadores,las cartas y el tablero (poner en el tablero la cartas)
 		this.hasieratu();
-		Jokoa.getJokoa();
 		new UIModua();
 	}
 	private void hasieratu() {
 		//factory bakoitzari deia egin eta gauzak esleitu
-		ListaJokalari.getListaJokalari();
-		ListaKartak kartakBerdea = KartaFactory.getFactory(berdea);
-		ListaKartak kartakUrdinak = KartaFactory.getFactory(urdina);
-		Ostikada ostikada = (ostikada)KartaFactory.getFactory(ostikada);
+		Pertsona jokalari1 = new Pertsona();
+		jokalari1.barajanSartu(ListaKartakFactory.getListaKartaFactory().createListak("Urdina"));
+		Ordenagailua IA = new Ordenagailua();
+		IA.barajanSartu(ListaKartakFactory.getListaKartaFactory().createListak("Berdea"));
+		Tablero.getTableroa();
+		
 		
 			
-		}
-		
-		
 	}
 	public static void main(String[] args) {
 		new Main();

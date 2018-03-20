@@ -11,9 +11,7 @@ class TestListaKartakFactory {
 
 	@Test
 	final void testGetListaKartaFactory() {
-		ListaKartak kartakBerdea = new ListaKartak();
-		kartakBerdea = ListaKartakFactory.getListaKartaFactory().createListak("Berdea");
-		assertNotNull(kartakBerdea);
+		assertNotNull(ListaKartakFactory.getListaKartaFactory());
 	}
 
 	@Test

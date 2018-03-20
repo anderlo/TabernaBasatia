@@ -4,7 +4,10 @@ public abstract class Jokalari {
 	protected ListaKartak eskua  ;
 	protected ListaKartak baraja ;
 	public Jokalari() {
-		this.eskua 	= null;
-		this.baraja 	= null;
+		this.eskua 	= new ListaKartak();
+		this.baraja 	= new ListaKartak();
+	}
+	public void barajanSartu(ListaKartak createListak) {
+
 	}
 }

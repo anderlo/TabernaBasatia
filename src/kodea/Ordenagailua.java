@@ -1,5 +1,5 @@
 package kodea;
 
-public class Ordenagailua {
+public class Ordenagailua extends Jokalari{
 
 }

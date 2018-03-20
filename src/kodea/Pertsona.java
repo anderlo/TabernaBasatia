@@ -1,5 +1,7 @@
 package kodea;
 
-public class Pertsona {
+public class Pertsona extends Jokalari{
+
+
 
 }

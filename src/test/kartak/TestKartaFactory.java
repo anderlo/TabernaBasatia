@@ -24,7 +24,7 @@ class TestKartaFactory {
 	 */
 	@Test
 	final void testGetKartaFactory() {
-		KartaFactory.getKartaFactory();
+		//KartaFactory.getKartaFactory();
 		assertNotNull(KartaFactory.getKartaFactory());
 	}
 
@@ -35,7 +35,6 @@ class TestKartaFactory {
 	final void testCreateKartaStringInteger() {
 		//LAU EGOERA POSIBLE DAUDE: Kolore eta zenbakia ondo edo txarto egotearen konbinazioak:
 		//1 EGOERA : Zenbakia ondo kolorea ondo
-		
 		KartaAnimali karta1;
 		for (int i = 0; i < 12; i++) {
 			karta1 = KartaFactory.getKartaFactory().createKarta("Berdea", i+1);
@@ -64,6 +63,9 @@ class TestKartaFactory {
 		assertNull(karta5);
 		KartaBerezia karta6 = KartaFactory.getKartaFactory().createKarta("Ostikada");
 		assertEquals("/Images/Ostikada.png", karta6.getPath());
+		KartaBerezia karta7 = KartaFactory.getKartaFactory().createKarta("Zerukoatea");
+		assertEquals("/Images/ZerukoAtea.png", karta7.getPath());
+
 		
 	}
 
