@@ -26,7 +26,7 @@ public class UIModua extends JFrame {
 		return uiModua;
 	}
 	
-	public UIModua() {
+	private UIModua() {
 		setBounds(800, 400, 191, 238);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		

@@ -1,6 +1,8 @@
 package interfazeak;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
@@ -13,7 +15,8 @@ public class UIKonpetitiboa extends JFrame {
 	private static UIKonpetitiboa nKonpetitiboa=null;
 	private JPanel contentPane;
 	static ArrayList<JCheckBox> buttons = new ArrayList<>();
-
+	private JButton btnNewButton;
+	private static int selectionCounter = 0;
 	/**
 	 * Launch the application.
 	 */
@@ -29,7 +32,11 @@ public class UIKonpetitiboa extends JFrame {
 			}
 		});
 	}
-	
+	public void setBotoia() {
+		System.out.println("Enabled");
+		this.btnNewButton.setVisible(true);
+
+	}
 	public static UIKonpetitiboa getKonpetitiboa() {
 		if (nKonpetitiboa==null) {
 			nKonpetitiboa = new UIKonpetitiboa();
@@ -40,6 +47,14 @@ public class UIKonpetitiboa extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	public int counterGehitu() {
+		selectionCounter++;
+		return selectionCounter;	
+	}
+	public int counterKendu() {
+		selectionCounter--;
+		return selectionCounter;
+	}
 	private UIKonpetitiboa() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -113,37 +128,51 @@ public class UIKonpetitiboa extends JFrame {
 		panel.add(checkBoxLehoi);
 		buttons.add(checkBoxLehoi);
 		
-		JButton btnNewButton = new JButton("Jokatu hautatu ditudan kartekin");
+		btnNewButton = new JButton("Jokatu hautatu ditudan kartekin");
+		btnNewButton.setEnabled(true);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				System.out.println(selectionCounter);
+				if (selectionCounter==4) {
+					UITablero uITablero = UITablero.getTableroa();
+					uITablero.main(null);
+					nKonpetitiboa.dispose();
+					}
+			}
+		});
 		contentPane.add(btnNewButton, BorderLayout.SOUTH);
+		
+		
 	}
 	
 	static class Listener implements ItemListener {
 
-        private final int MAX_SELECTIONS = 5;
-
-        private int selectionCounter = 0;
+        private final int MAX_SELECTIONS = 4;
+        	
+        //private int selectionCounter = 0;
 
         @Override
         public void itemStateChanged(ItemEvent e) {
             JCheckBox source = (JCheckBox) e.getSource();
-
+            int aux;
             if (source.isSelected()) {
-                selectionCounter++;
+               aux = UIKonpetitiboa.getKonpetitiboa().counterGehitu();
                 // check for max selections:
-                if (selectionCounter == MAX_SELECTIONS)
+                if (aux == MAX_SELECTIONS) {
                     for (JCheckBox box: buttons)
-                        if (!box.isSelected())
+                        if (!box.isSelected()) {
                             box.setEnabled(false);
+                        }
+                UIKonpetitiboa.getKonpetitiboa().setBotoia();
+                }
             }
             else {
-                selectionCounter--;
+            		aux =UIKonpetitiboa.getKonpetitiboa().counterKendu();
                 // check for less than max selections:
-                if (selectionCounter < MAX_SELECTIONS)
+                if (aux < MAX_SELECTIONS)
                     for (JCheckBox box: buttons)
                         box.setEnabled(true);
             }
         }
     }
-	
-
 }
