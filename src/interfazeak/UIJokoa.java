@@ -56,6 +56,7 @@ public class UIJokoa extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Jokoa.getJokoa().hasieratuJokoa();
+				UIModua.main(null);
 				dispose();
 			}
 		});

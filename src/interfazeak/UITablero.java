@@ -33,11 +33,11 @@ public class UITablero extends JFrame {
 		});
 	}
 	
-	public static UITablero getNormala() {
-		if (nNormala == null) {
-			nNormala = new UITablero();
+	public static UITablero getTableroa() {
+		if (uiTablero==null) {
+			uiTablero = new UITablero();
 		}
-		return nNormala;
+		return uiTablero;
 	}
 
 	/**
@@ -101,10 +101,4 @@ public class UITablero extends JFrame {
 		lblTokatuZaizu.setBounds(244, 36, 61, 59);
 		panel.add(lblTokatuZaizu);
 	}
-	public static UITablero getTableroa() {
-			if (uiTablero==null) {
-				uiTablero = new UITablero();
-			}
-			return uiTablero;
-		}
 }

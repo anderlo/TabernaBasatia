@@ -22,6 +22,5 @@ public class Jokoa {
 	tablero.kokatuBerezia(karta1);
 	ZerukoAtea karta2 	= (ZerukoAtea) 	KartaFactory.getKartaFactory().createKarta("ZerukoAtea");
 	tablero.kokatuBerezia(karta2);
-	UIModua.getUIModua().setVisible(true);
 	}	
 }

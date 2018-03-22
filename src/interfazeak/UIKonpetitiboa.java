@@ -32,10 +32,7 @@ public class UIKonpetitiboa extends JFrame {
 			}
 		});
 	}
-	public void setBotoia() {
-		btnNewButton.setEnabled(true);
-
-	}
+	
 	public static UIKonpetitiboa getKonpetitiboa() {
 		if (nKonpetitiboa==null) {
 			nKonpetitiboa = new UIKonpetitiboa();
@@ -50,10 +47,12 @@ public class UIKonpetitiboa extends JFrame {
 		selectionCounter++;
 		return selectionCounter;	
 	}
+	
 	public int counterKendu() {
 		selectionCounter--;
 		return selectionCounter;
 	}
+	
 	private UIKonpetitiboa() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -128,12 +127,11 @@ public class UIKonpetitiboa extends JFrame {
 		buttons.add(checkBoxLehoi);
 		
 		btnNewButton = new JButton("Jokatu hautatu ditudan kartekin");
-		btnNewButton.setEnabled(true);
+		//btnNewButton.setEnabled(false);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (selectionCounter==4) {
-					UITablero uITablero = UITablero.getTableroa();
-					uITablero.main(null);
+					UITablero.main(null);
 					dispose();
 					}
 			}
@@ -161,7 +159,7 @@ public class UIKonpetitiboa extends JFrame {
                         if (!box.isSelected()) {
                             box.setEnabled(false);
                         }
-                UIKonpetitiboa.getKonpetitiboa().setBotoia();
+                    //btnNewButton.setEnabled(true);
                 }
             }
             else {
@@ -170,6 +168,7 @@ public class UIKonpetitiboa extends JFrame {
                 if (aux < MAX_SELECTIONS)
                     for (JCheckBox box: buttons)
                         box.setEnabled(true);
+                //btnNewButton.setEnabled(false);
             }
         }
     }
