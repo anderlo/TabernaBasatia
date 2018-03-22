@@ -15,7 +15,7 @@ public class UIKonpetitiboa extends JFrame {
 	private static UIKonpetitiboa nKonpetitiboa=null;
 	private JPanel contentPane;
 	static ArrayList<JCheckBox> buttons = new ArrayList<>();
-	private JButton btnNewButton;
+	private static JButton btnNewButton;
 	private static int selectionCounter = 0;
 	/**
 	 * Launch the application.
@@ -33,8 +33,7 @@ public class UIKonpetitiboa extends JFrame {
 		});
 	}
 	public void setBotoia() {
-		System.out.println("Enabled");
-		this.btnNewButton.setVisible(true);
+		btnNewButton.setEnabled(true);
 
 	}
 	public static UIKonpetitiboa getKonpetitiboa() {
@@ -132,11 +131,10 @@ public class UIKonpetitiboa extends JFrame {
 		btnNewButton.setEnabled(true);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.out.println(selectionCounter);
 				if (selectionCounter==4) {
 					UITablero uITablero = UITablero.getTableroa();
 					uITablero.main(null);
-					nKonpetitiboa.dispose();
+					dispose();
 					}
 			}
 		});

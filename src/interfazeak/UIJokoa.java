@@ -51,12 +51,12 @@ public class UIJokoa extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JButton btnJokatu = new JButton("Jokoa");
+		JButton btnJokatu = new JButton("Jokatu");
 		btnJokatu.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Jokoa.getJokoa().hasieratuJokoa();
-				setVisible(false);
+				dispose();
 			}
 		});
 		btnJokatu.setBounds(166, 232, 117, 29);
