@@ -15,4 +15,15 @@ public class ListaKartak {
 	public int kopurua() {
 		return this.kartak.size();
 	}
+	public Karta kartaKendu(String izena) {
+		Karta karta = null;
+		for (int i = 0; i < this.kopurua()-1; i++) {
+			if (this.kartak.get(i).getIzena().equals(izena)){
+				karta = kartak.get(i);
+				kartak.remove(i);
+			}
+		}
+		return karta;
+	}
+	
 }

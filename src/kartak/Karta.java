@@ -10,4 +10,7 @@ public abstract class Karta {
 	public void setIzena() {
 		this.izena = this.getClass().getName();
 	}
+	public String getIzena() {
+		return this.izena;
+	}
 }
