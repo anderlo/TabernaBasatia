@@ -19,8 +19,8 @@ public class Jokoa {
 	IA.barajanSartu(ListaKartakFactory.getListaKartaFactory().createListak("Berdea"));
 	Tablero tablero 		= Tablero.getTableroa();
 	Ostikada karta1 		= (Ostikada)		KartaFactory.getKartaFactory().createKarta("Ostikada");
-	tablero.kokatuBerezia(karta1);
+	tablero.kokatuOstikada(karta1);
 	ZerukoAtea karta2 	= (ZerukoAtea) 	KartaFactory.getKartaFactory().createKarta("ZerukoAtea");
-	tablero.kokatuBerezia(karta2);
+	tablero.kokatuZerukoAtea(karta2);
 	}	
 }

@@ -7,4 +7,10 @@ public abstract class Karta {
 	public String getPath() {
 		return this.path;
 	}
+	public void setIzena() {
+		this.izena = this.getClass().getName();
+	}
+	public String getIzena() {
+		return this.izena;
+	}
 }
