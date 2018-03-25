@@ -43,6 +43,7 @@ public class UIModua extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				UITablero.main(null);
+				UIEskua.main(null);
 				uiModua.dispose();
 			}
 		});
