@@ -20,7 +20,7 @@ public class Jokoa {
 	Tablero tablero 		= Tablero.getTableroa();
 	Ostikada karta1 		= (Ostikada)		KartaFactory.getKartaFactory().createKarta("Ostikada");
 	tablero.kokatuOstikada(karta1);
-	ZerukoAtea karta2 	= (ZerukoAtea) 	KartaFactory.getKartaFactory().createKarta("ZerukoAtea");
+	ZerukoAtea karta2 	= (ZerukoAtea) 	KartaFactory.getKartaFactory().createKarta("Zerukoatea");
 	tablero.kokatuZerukoAtea(karta2);
 	}	
 }

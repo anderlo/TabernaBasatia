@@ -132,6 +132,7 @@ public class UIKonpetitiboa extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				if (selectionCounter==4) {
 					UITablero.main(null);
+					UIEskua.main(null);
 					dispose();
 					}
 			}
