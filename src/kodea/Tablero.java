@@ -21,7 +21,6 @@ public class Tablero {
 		this.ostikada		= null;
 		this.zerukoatea		= null;
 		Ostikada karta	 	= (Ostikada)   KartaFactory.getKartaFactory().createKarta("Ostikada");
-		System.out.println(karta.getIzena()+"hehexd");
 		ZerukoAtea karta2 	= (ZerukoAtea) KartaFactory.getKartaFactory().createKarta("Zerukoatea");
 		
 		this.kokatuOstikada(karta);
@@ -30,7 +29,6 @@ public class Tablero {
 	public void kokatuOstikada(Ostikada karta) {
 		// TODO Auto-generated method stub
 		if (karta.getIzena().equals("Ostikada")){
-			System.out.println("hemen nago");
 			this.ostikada 	= karta;
 		}else {
 			//System.out.println("hemen nago 2");
@@ -58,7 +56,6 @@ public class Tablero {
 	}
 
 	public Ostikada getOstikada() {
-		System.out.println(this.ostikada.getIzena()+" getOstikada 1");
 		return this.ostikada;
 	}
 

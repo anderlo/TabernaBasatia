@@ -5,6 +5,8 @@ import kartak.*;
 
 public class Jokoa {
 	private static Jokoa nJokoa;
+	private ListaJokalari jokalariak;
+	private Tablero tablero;
 	private Jokoa() {}
 	public static Jokoa getJokoa() {
 		if (nJokoa==null){
@@ -23,4 +25,14 @@ public class Jokoa {
 	ZerukoAtea karta2 	= (ZerukoAtea) 	KartaFactory.getKartaFactory().createKarta("Zerukoatea");
 	tablero.kokatuZerukoAtea(karta2);
 	}	
+	private void setTablero(Tablero tablero) {
+		this.tablero = tablero ; 
+	}
+	private void setListaJokalari(ListaJokalari jokalariak) {
+		this.jokalariak = jokalariak;
+	}
+	private void setJokalari(Jokalari jokalari) {
+		this.jokalariak.jokalariakSartu(jokalari);
+	}
+	
 }
