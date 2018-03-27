@@ -7,7 +7,10 @@ public class Jokoa {
 	private static Jokoa nJokoa;
 	private ListaJokalari jokalariak;
 	private Tablero tablero;
-	private Jokoa() {}
+	private Jokoa() {
+		tablero = Tablero.getTableroa();
+		jokalariak = ListaJokalari.getNireListaJokalari();
+	}
 	public static Jokoa getJokoa() {
 		if (nJokoa==null){
 			nJokoa = new Jokoa();
@@ -24,15 +27,18 @@ public class Jokoa {
 	tablero.kokatuOstikada(karta1);
 	ZerukoAtea karta2 	= (ZerukoAtea) 	KartaFactory.getKartaFactory().createKarta("Zerukoatea");
 	tablero.kokatuZerukoAtea(karta2);
+	setTablero(tablero);
+	setJokalari(jokalari1);
+	setJokalari(IA);
 	}	
-	private void setTablero(Tablero tablero) {
-		this.tablero = tablero ; 
+	private void setTablero(Tablero ptablero) {
+		tablero = ptablero ; 
 	}
-	private void setListaJokalari(ListaJokalari jokalariak) {
-		this.jokalariak = jokalariak;
+	private void setListaJokalari(ListaJokalari pjokalariak) {
+		jokalariak = pjokalariak;
 	}
-	private void setJokalari(Jokalari jokalari) {
-		this.jokalariak.jokalariakSartu(jokalari);
+	private void setJokalari(Jokalari pjokalari) {
+		jokalariak.jokalariakSartu(pjokalari);
 	}
 	
 }

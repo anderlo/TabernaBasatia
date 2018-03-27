@@ -60,7 +60,7 @@ class TestListaJokalari {
 		lj1.jokalariakSartu(j1);
 		int t=lj1.getTurnoa();
 		lj1.turnoaPasatu();
-		assertNotEquals(t,lj1.getTurnoa());
+		assertEquals(t,lj1.getTurnoa());
 		lj1.ezabatuJokalaria(0);
 	}
 

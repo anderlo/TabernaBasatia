@@ -31,7 +31,6 @@ public class Tablero {
 		if (karta.getIzena().equals("Ostikada")){
 			this.ostikada 	= karta;
 		}else {
-			//System.out.println("hemen nago 2");
 			this.ostikada 	= null;
 		}
 	}

@@ -12,13 +12,11 @@ public class ListaJokalari {
 		this.jokalari.add(pJok);
 	}
 	public static ListaJokalari getNireListaJokalari() {
-		if(nListaJokalari==null) {
-			nListaJokalari= new ListaJokalari();
-		}
+		if(nListaJokalari==null) {nListaJokalari= new ListaJokalari();}
 		return nListaJokalari;
 	}
 	public void turnoaPasatu() {
-		if(this.jokalari.size()<=this.turnoa) {
+		if(this.jokalari.size()-1<=this.turnoa) {
 			this.turnoa=0;
 		}else {
 			this.turnoa++;
