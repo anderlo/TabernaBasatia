@@ -67,7 +67,7 @@ class TestListaJokalari {
 	@Test
 	void testGetJokalariarenTurnoa() {
 		lj1.jokalariakSartu(j1);
-		assertNotNull(lj1.getJokalariarenTurnoa(lj1.getTurnoa()));
+		assertNotNull(lj1.getJokalariarenTurnoa());
 		lj1.ezabatuJokalaria(0);
 	}
 

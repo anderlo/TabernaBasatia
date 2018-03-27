@@ -22,8 +22,8 @@ public class ListaJokalari {
 			this.turnoa++;
 		}
 	}
-	public Jokalari getJokalariarenTurnoa(int pT) {
-		return this.jokalari.get(pT);
+	public Jokalari getJokalariarenTurnoa() {
+		return this.jokalari.get(this.turnoa);
 	}
 	public int jokKop() {
 		return this.jokalari.size();
