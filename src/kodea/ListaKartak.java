@@ -15,13 +15,21 @@ public class ListaKartak {
 	public int kopurua() {
 		return this.kartak.size();
 	}
-	public Karta kartaKendu(String izena) {
-		Karta karta = null;
+	public KartaAnimali kartaKendu(String izena) {
+		KartaAnimali karta = null;
 		for (int i = 0; i < this.kopurua()-1; i++) {
 			if (this.kartak.get(i).getIzena().equals(izena)){
 				karta = kartak.get(i);
 				kartak.remove(i);
 			}
+		}
+		return karta;
+	}
+	public KartaAnimali kartaKendu(int pos) {
+		KartaAnimali karta = null;
+		if (pos<= this.kopurua()-1) {
+			karta = this.kartak.get(pos);
+			this.kartak.remove(pos);
 		}
 		return karta;
 	}
