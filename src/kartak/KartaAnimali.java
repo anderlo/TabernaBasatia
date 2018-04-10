@@ -28,4 +28,7 @@ public class KartaAnimali extends Karta{
 	public int animaliZenbakia() {
 		return this.zenbakia;
 	}
+	public boolean errekurtsiboaDa() {
+		return this.errekurrentea;
+	}
 }
