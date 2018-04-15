@@ -61,5 +61,11 @@ public class Tablero {
 	public ZerukoAtea getZerukoatea() {
 		return zerukoatea;
 	}
+	public void sartuZeruan(KartaAnimali pKarta) {
+		this.barruan.add(pKarta);
+	}
+	public void ateraKanpora(KartaAnimali pKarta) {
+		this.kanpoan.add(pKarta);
+	}
 
 }
