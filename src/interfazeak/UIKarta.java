@@ -6,6 +6,15 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 
 public class UIKarta extends JButton implements MouseListener {
+	String path = null;
+	
+	public UIKarta(String argazkia) {
+		path = argazkia;
+	}
+	
+	public String getPath() {
+		return path;
+	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {

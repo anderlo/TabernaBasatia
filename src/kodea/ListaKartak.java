@@ -34,4 +34,8 @@ public class ListaKartak {
 		return karta;
 	}
 	
+	public ArrayList<KartaAnimali> getKartak(){
+		return kartak;
+	}
+	
 }

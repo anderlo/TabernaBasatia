@@ -2,13 +2,22 @@ package interfazeak;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Image;
+import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
-public class UIEskua extends JFrame {
+import kartak.KartaAnimali;
+import kodea.Jokalari;
+import kodea.Jokoa;
+
+public class UIEskua extends JFrame implements Observer {
 
 	private JPanel contentPane;
 
@@ -43,24 +52,36 @@ public class UIEskua extends JFrame {
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JTextArea textKarta1 = new JTextArea();
-		textKarta1.setText("Karta1");
-		textKarta1.setBounds(10, 11, 143, 122);
-		panel.add(textKarta1);
+		ArrayList<KartaAnimali> kartak = Jokoa.getJokoa().getJokalariak().getTurnoaDuenJokalaria().getEskua().getKartak();
 		
-		JTextArea textKarta2 = new JTextArea();
-		textKarta2.setText("Karta2");
-		textKarta2.setBounds(163, 11, 143, 122);
-		panel.add(textKarta2);
+		UIKarta karta1 = new UIKarta(kartak.get(0).getPath());
+		ImageIcon image1 = new ImageIcon (new ImageIcon(karta1.getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
+		karta1.setIcon(image1);
+		karta1.setBounds(10, 11, 143, 122);
+		panel.add(karta1);
 		
-		JTextArea textKarta3 = new JTextArea();
-		textKarta3.setText("Karta3");
-		textKarta3.setBounds(316, 11, 143, 122);
-		panel.add(textKarta3);
+		UIKarta karta2 = new UIKarta(kartak.get(1).getPath());
+		ImageIcon image2 = new ImageIcon (new ImageIcon(karta2.getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
+		karta2.setIcon(image2);
+		karta2.setBounds(163, 11, 143, 122);
+		panel.add(karta2);
 		
-		JTextArea textKarta4 = new JTextArea();
-		textKarta4.setText("Karta4");
-		textKarta4.setBounds(469, 11, 143, 122);
-		panel.add(textKarta4);
+		UIKarta karta3 = new UIKarta(kartak.get(2).getPath());
+		ImageIcon image3 = new ImageIcon (new ImageIcon(karta3.getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
+		karta3.setIcon(image3);
+		karta3.setBounds(316, 11, 143, 122);
+		panel.add(karta3);
+		
+		UIKarta karta4 = new UIKarta(kartak.get(3).getPath());
+		ImageIcon image4 = new ImageIcon (new ImageIcon(karta4.getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
+		karta4.setIcon(image4);
+		karta4.setBounds(469, 11, 143, 122);
+		panel.add(karta4);
+	}
+
+	@Override
+	public void update(Observable o, Object arg) {
+		// TODO Auto-generated method stub
+		
 	}
 }

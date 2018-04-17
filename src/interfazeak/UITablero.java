@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Image;
 import java.awt.Window;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -12,7 +14,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 
-public class UITablero extends JFrame {
+public class UITablero extends JFrame implements Observer {
 	private static UITablero nNormala = null;
 	private JPanel contentPane;
 	private UIKarta[] jokalariarenEskua;
@@ -101,5 +103,11 @@ public class UITablero extends JFrame {
 		JLabel lblTokatuZaizu = new JLabel(image4);
 		lblTokatuZaizu.setBounds(652, 23, 250, 314);
 		panel.add(lblTokatuZaizu);
+	}
+
+	@Override
+	public void update(Observable o, Object arg) {
+		// TODO Auto-generated method stub
+		
 	}
 }

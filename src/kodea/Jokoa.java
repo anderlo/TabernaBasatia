@@ -1,9 +1,11 @@
 package kodea;
 
+import java.util.Observable;
+
 import interfazeak.UIModua;
 import kartak.*;
 
-public class Jokoa {
+public class Jokoa extends Observable {
 	private static Jokoa nJokoa;
 	private ListaJokalari jokalariak;
 	private Tablero tablero;
@@ -41,4 +43,7 @@ public class Jokoa {
 		jokalariak.jokalariakSartu(pjokalari);
 	}
 	
+	public ListaJokalari getJokalariak() {
+		return jokalariak;
+	}
 }

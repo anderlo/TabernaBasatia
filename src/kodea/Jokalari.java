@@ -13,10 +13,13 @@ public abstract class Jokalari {
 	}
 	public void barajanSartu(ListaKartak createListak) {
 		this.baraja=createListak;
+		for (int i = 0; i < 4; i++) {
+			eskuanSartu();
+		}
 	}
 	public void eskuanSartu() {
 		Random lortuKarta=new Random();
-		int n=lortuKarta.nextInt(11);
+		int n=lortuKarta.nextInt(baraja.getKartak().size());
 		KartaAnimali k=this.baraja.kartaKendu(n);
 		this.kartaSartu(k);
 	}
