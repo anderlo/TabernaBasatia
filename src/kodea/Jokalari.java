@@ -26,8 +26,6 @@ public abstract class Jokalari {
 	}
 	private void eskuanSartuKonp(int pKarta) {
 		//Modu konpetitiboan bagaude, guk aukeratutako kartekin hasteko
-		System.out.println(pKarta);
-		System.out.println(this.baraja.getKartak().get(0).getIzena());
 		for(int i=0;i<this.baraja.kopurua();i++) {
 			if(this.baraja.getKartak().get(i).animaliZenbakia()==pKarta) {
 				KartaAnimali k = this.baraja.kartaKendu(i);

@@ -32,7 +32,7 @@ public class UIModua extends JFrame {
 	private UIModua() {
 		setBounds(800, 400, 191, 238);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		setLocationRelativeTo(null);
 		contentPane = 	new JPanel();
 		JPanel panela = 	new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
