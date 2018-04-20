@@ -180,7 +180,7 @@ public class UIKonpetitiboa extends JFrame {
         }
 
 		private int bilatuKartaZenb(String pIzena) {
-			// Izenaren bidez bilatzen du animaliaren kartaren zenbakia
+			// Izenaren bidez bilatzen du animaliaren kartaren zenbakia.
 			int emaitza = 0;
 			switch (pIzena) {
 			case "Foka":

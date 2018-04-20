@@ -6,7 +6,7 @@ import java.util.Observable;
 import interfazeak.UIModua;
 import kartak.*;
 
-public class Jokoa extends Observable {
+public class Jokoa extends Observable { //Inplementatu behar
 	private static Jokoa nJokoa;
 	private ListaJokalari jokalariak;
 	private Tablero tablero;

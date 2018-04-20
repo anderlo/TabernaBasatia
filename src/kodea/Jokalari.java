@@ -26,6 +26,7 @@ public abstract class Jokalari {
 	}
 	private void eskuanSartuKonp(int pKarta) {
 		//Modu konpetitiboan bagaude, guk aukeratutako kartekin hasteko
+		//Horretarako boolean eta arraylist bat erabiltzen ditugu
 		for(int i=0;i<this.baraja.kopurua();i++) {
 			if(this.baraja.getKartak().get(i).animaliZenbakia()==pKarta) {
 				KartaAnimali k = this.baraja.kartaKendu(i);
