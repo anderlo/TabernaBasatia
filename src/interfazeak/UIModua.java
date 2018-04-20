@@ -7,6 +7,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import kodea.Jokoa;
+
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 
@@ -42,6 +45,7 @@ public class UIModua extends JFrame {
 		btnModuNormala.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				Jokoa.getJokoa().hasieratuJokoa(false, null);
 				UITablero.main(null);
 				UIEskua.main(null);
 				uiModua.dispose();

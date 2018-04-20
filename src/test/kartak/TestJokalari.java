@@ -41,7 +41,7 @@ class TestJokalari {
 
 	@Test
 	void testBarajanSartu() {
-		j1.barajanSartu(l1);
+		j1.barajanSartu(l1,false,null);
 		assertNotNull(j1.getBaraja());
 	}
 	@Test
