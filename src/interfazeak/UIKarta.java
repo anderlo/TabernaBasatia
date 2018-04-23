@@ -6,11 +6,14 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 
 public class UIKarta extends JButton implements MouseListener {
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+	String path = null;
+	
+	public UIKarta(String argazkia) {
+		path = argazkia;
+	}
+	
+	public String getPath() {
+		return path;
 	}
 
 	@Override
@@ -33,6 +36,12 @@ public class UIKarta extends JButton implements MouseListener {
 
 	@Override
 	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}

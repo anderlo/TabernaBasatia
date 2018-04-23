@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import kodea.Jokoa;
+
 public class UIKonpetitiboa extends JFrame {
 	
 	private static UIKonpetitiboa nKonpetitiboa=null;
@@ -17,6 +19,7 @@ public class UIKonpetitiboa extends JFrame {
 	static ArrayList<JCheckBox> buttons = new ArrayList<>();
 	private static JButton btnNewButton;
 	private static int selectionCounter = 0;
+	private static ArrayList<Integer> hautatuak = new ArrayList<Integer>();
 	/**
 	 * Launch the application.
 	 */
@@ -56,6 +59,7 @@ public class UIKonpetitiboa extends JFrame {
 	private UIKonpetitiboa() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
+		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -131,6 +135,7 @@ public class UIKonpetitiboa extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (selectionCounter==4) {
+					Jokoa.getJokoa().hasieratuJokoa(true, hautatuak);
 					UITablero.main(null);
 					UIEskua.main(null);
 					dispose();
@@ -153,6 +158,7 @@ public class UIKonpetitiboa extends JFrame {
             JCheckBox source = (JCheckBox) e.getSource();
             int aux;
             if (source.isSelected()) {
+            	hautatuak.add(bilatuKartaZenb(source.getText()));
                aux = UIKonpetitiboa.getKonpetitiboa().counterGehitu();
                 // check for max selections:
                 if (aux == MAX_SELECTIONS) {
@@ -172,5 +178,49 @@ public class UIKonpetitiboa extends JFrame {
                 //btnNewButton.setEnabled(false);
             }
         }
+
+		private int bilatuKartaZenb(String pIzena) {
+			// Izenaren bidez bilatzen du animaliaren kartaren zenbakia.
+			int emaitza = 0;
+			switch (pIzena) {
+			case "Foka":
+				emaitza =6;
+				break;
+			case "Hipopotamo":
+				emaitza =11;
+				break;
+			case "Jirafa":
+				emaitza =8;
+				break;
+			case "Kameleoi":
+				emaitza =5;
+				break;
+			case "Kanguru":
+				emaitza =3;
+				break;
+			case "Krokodilo":
+				emaitza =10;
+				break;
+			case "Lehoi":
+				emaitza =12;
+				break;
+			case "Loro":
+				emaitza =2;
+				break;
+			case "Mofeta":
+				emaitza =1;
+				break;
+			case "Suge":
+				emaitza =9;
+				break;
+			case "Tximino":
+				emaitza =4;
+				break;
+			case "Zebra":
+				emaitza =7;
+				break;
+			}
+			return emaitza;
+		}
     }
 }

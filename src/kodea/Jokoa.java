@@ -1,9 +1,12 @@
 package kodea;
 
+import java.util.ArrayList;
+import java.util.Observable;
+
 import interfazeak.UIModua;
 import kartak.*;
 
-public class Jokoa {
+public class Jokoa extends Observable { //Inplementatu behar
 	private static Jokoa nJokoa;
 	private ListaJokalari jokalariak;
 	private Tablero tablero;
@@ -17,11 +20,11 @@ public class Jokoa {
 		}
 		return nJokoa;
 	}
-	public void hasieratuJokoa() {
+	public void hasieratuJokoa(boolean pKonpetitiboa, ArrayList<Integer> pHautatuak) {
 	Pertsona jokalari1 	= 				new Pertsona();
-	jokalari1.barajanSartu(ListaKartakFactory.getListaKartaFactory().createListak("Urdina"));
+	jokalari1.barajanSartu(ListaKartakFactory.getListaKartaFactory().createListak("Urdina"), pKonpetitiboa, pHautatuak);
 	Ordenagailua IA	 	= 				new Ordenagailua();
-	IA.barajanSartu(ListaKartakFactory.getListaKartaFactory().createListak("Berdea"));
+	IA.barajanSartu(ListaKartakFactory.getListaKartaFactory().createListak("Berdea"), false, null);
 	Tablero tablero 		= Tablero.getTableroa();
 	Ostikada karta1 		= (Ostikada)		KartaFactory.getKartaFactory().createKarta("Ostikada");
 	tablero.kokatuOstikada(karta1);
@@ -41,4 +44,7 @@ public class Jokoa {
 		jokalariak.jokalariakSartu(pjokalari);
 	}
 	
+	public ListaJokalari getJokalariak() {
+		return jokalariak;
+	}
 }

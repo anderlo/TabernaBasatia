@@ -81,4 +81,7 @@ public class ListaKartakTableroan {
 		}
 
 	}
+	public ArrayList<KartaAnimali> getKartak(){
+		return this.kartak;
+	}
 }

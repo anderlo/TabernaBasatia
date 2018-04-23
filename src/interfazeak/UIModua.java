@@ -7,6 +7,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import kodea.Jokoa;
+
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 
@@ -29,7 +32,7 @@ public class UIModua extends JFrame {
 	private UIModua() {
 		setBounds(800, 400, 191, 238);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		setLocationRelativeTo(null); //Pantailaren erdian
 		contentPane = 	new JPanel();
 		JPanel panela = 	new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -42,6 +45,7 @@ public class UIModua extends JFrame {
 		btnModuNormala.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				Jokoa.getJokoa().hasieratuJokoa(false, null);
 				UITablero.main(null);
 				UIEskua.main(null);
 				uiModua.dispose();

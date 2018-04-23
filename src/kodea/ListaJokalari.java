@@ -22,7 +22,7 @@ public class ListaJokalari {
 			this.turnoa++;
 		}
 	}
-	public Jokalari getJokalariarenTurnoa() {
+	public Jokalari getTurnoaDuenJokalaria() {
 		return this.jokalari.get(this.turnoa);
 	}
 	public int jokKop() {

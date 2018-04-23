@@ -41,6 +41,7 @@ public class UIJokoa extends JFrame {
 	public UIJokoa() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
+		setLocationRelativeTo(null); //Pantailaren erdian
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -55,7 +56,6 @@ public class UIJokoa extends JFrame {
 		btnJokatu.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Jokoa.getJokoa().hasieratuJokoa();
 				UIModua.main(null);
 				dispose();
 			}
