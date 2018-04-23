@@ -20,7 +20,7 @@ public class KartaAnimali extends Karta{
 	protected void setPath() {
 		// TODO Auto-generated method stub
 		if (this.kolore != null){
-			this.path = "/Images/"+this.animalia+""+this.kolore+".png";
+			this.path = "Images/"+this.animalia+""+this.kolore+".jpg";
 		}
 		else {
 			this.path=null;
