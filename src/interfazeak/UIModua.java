@@ -15,6 +15,10 @@ import javax.swing.JButton;
 
 public class UIModua extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private static UIModua uiModua = null;
 	
@@ -46,8 +50,8 @@ public class UIModua extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Jokoa.getJokoa().hasieratuJokoa(false, null);
-				UITablero.main(null);
-				UIEskua.main(null);
+				UITablero.getTableroa().uiTableroaSortu();;
+				UIEskua.getUIEskua().uiEskuaSortu();
 				uiModua.dispose();
 			}
 		});
@@ -57,8 +61,7 @@ public class UIModua extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				UIKonpetitiboa uIKonpetitiboa = UIKonpetitiboa.getKonpetitiboa();
-				uIKonpetitiboa.main(null);
+				UIKonpetitiboa.getKonpetitiboa();
 				uiModua.dispose();
 			}
 		});

@@ -14,27 +14,16 @@ import kodea.Jokoa;
 
 public class UIKonpetitiboa extends JFrame {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static UIKonpetitiboa nKonpetitiboa=null;
 	private JPanel contentPane;
 	static ArrayList<JCheckBox> buttons = new ArrayList<>();
 	private static JButton btnNewButton;
 	private static int selectionCounter = 0;
 	private static ArrayList<Integer> hautatuak = new ArrayList<Integer>();
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					UIKonpetitiboa frame = new UIKonpetitiboa();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	
 	public static UIKonpetitiboa getKonpetitiboa() {
 		if (nKonpetitiboa==null) {
@@ -136,15 +125,15 @@ public class UIKonpetitiboa extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				if (selectionCounter==4) {
 					Jokoa.getJokoa().hasieratuJokoa(true, hautatuak);
-					UITablero.main(null);
-					UIEskua.main(null);
+					UITablero.getTableroa().uiTableroaSortu();;
+					UIEskua.getUIEskua().uiEskuaSortu();
 					dispose();
 					}
 			}
 		});
 		contentPane.add(btnNewButton, BorderLayout.SOUTH);
 		
-		
+		setVisible(true);
 	}
 	
 	static class Listener implements ItemListener {

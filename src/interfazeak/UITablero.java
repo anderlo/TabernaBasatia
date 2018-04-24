@@ -1,9 +1,7 @@
 package interfazeak;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.Image;
-import java.awt.Window;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -11,30 +9,19 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import kodea.Jokoa;
+
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 
 public class UITablero extends JFrame implements Observer {
-	private static UITablero nNormala = null;
-	private JPanel contentPane;
-	private UIKarta[] jokalariarenEskua;
-	private UIKarta[] ordenagailuarenEskua;
-	private static UITablero uiTablero;
 	/**
-	 * Launch the application.
+	 * 
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					UITablero frame = new UITablero();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private static UITablero uiTablero;
 	
 	public static UITablero getTableroa() {
 		if (uiTablero==null) {
@@ -47,6 +34,10 @@ public class UITablero extends JFrame implements Observer {
 	 * Create the frame.
 	 */
 	private UITablero() {
+		Jokoa.getJokoa().addObserver(this);
+	}
+	
+	public void uiTableroaSortu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1164, 590);
 		contentPane = new JPanel();
@@ -103,11 +94,13 @@ public class UITablero extends JFrame implements Observer {
 		JLabel lblTokatuZaizu = new JLabel(image4);
 		lblTokatuZaizu.setBounds(652, 23, 250, 314);
 		panel.add(lblTokatuZaizu);
+		
+		setVisible(true);
 	}
 
 	@Override
 	public void update(Observable o, Object arg) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("tableroa aldatu da");
 	}
 }

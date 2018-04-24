@@ -1,6 +1,5 @@
 package interfazeak;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +15,10 @@ import javax.swing.JButton;
 
 public class UIKanguru extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -81,5 +84,6 @@ public class UIKanguru extends JFrame {
 		ButtonGroup saltoTaldeBotoiak = new ButtonGroup();
 		saltoTaldeBotoiak.add(saltoBatBtn);
 		saltoTaldeBotoiak.add(saltoBiBtn);
+		setVisible(true);
 	}
 }

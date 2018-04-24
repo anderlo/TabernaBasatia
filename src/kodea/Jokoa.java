@@ -11,6 +11,7 @@ public class Jokoa extends Observable { //Inplementatu behar
 	private ListaJokalari jokalariak;
 	private Tablero tablero;
 	private Jokoa() {
+		super();
 		tablero = Tablero.getTableroa();
 		jokalariak = ListaJokalari.getNireListaJokalari();
 	}
@@ -46,5 +47,20 @@ public class Jokoa extends Observable { //Inplementatu behar
 	
 	public ListaJokalari getJokalariak() {
 		return jokalariak;
+	}
+	public Tablero getTablero() {
+		return tablero;
+	}
+	
+	public void kartaJokatu(String izena) {
+		// TODO Auto-generated method stub
+		getJokalariak().getTurnoaDuenJokalaria().jokatuKarta(izena);
+		kartaErrekurtsiboakAktibatu();
+		notifyObservers();
+	}
+	
+	private void kartaErrekurtsiboakAktibatu() {
+		// TODO Auto-generated method stub
+		//Hacer la accion de todas las cartas que hay en el tablero excepto la que se acaba de jugar
 	}
 }

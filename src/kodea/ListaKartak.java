@@ -17,7 +17,7 @@ public class ListaKartak {
 	}
 	public KartaAnimali kartaKendu(String izena) {
 		KartaAnimali karta = null;
-		for (int i = 0; i < this.kopurua()-1; i++) {
+		for (int i = 0; i <= this.kopurua()-1; i++) {
 			if (this.kartak.get(i).getIzena().equals(izena)){
 				karta = kartak.get(i);
 				kartak.remove(i);

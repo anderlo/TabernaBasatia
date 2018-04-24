@@ -8,7 +8,7 @@ public class KartaAnimali extends Karta{
 	protected Ordenatu ord;
 	protected Bota bota; 
 	public KartaAnimali(String kolorea,int zenbakia) {
-		this.kolore 			= null;
+		this.kolore 		= null;
 		this.zenbakia 		= zenbakia;
 		this.errekurrentea 	= false;
 		if (kolorea =="Urdina"||kolorea=="Berdea") {

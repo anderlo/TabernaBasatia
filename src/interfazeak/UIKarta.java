@@ -5,11 +5,20 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 
+import kodea.Jokoa;
+
 public class UIKarta extends JButton implements MouseListener {
-	String path = null;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	String path;
+	String izena;
 	
-	public UIKarta(String argazkia) {
+	public UIKarta(String argazkia, String pIzena) {
 		path = argazkia;
+		izena = pIzena;
+		this.addMouseListener(this);
 	}
 	
 	public String getPath() {
@@ -31,19 +40,19 @@ public class UIKarta extends JButton implements MouseListener {
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+		Jokoa.getJokoa().kartaJokatu(izena);
 	}
 
 }

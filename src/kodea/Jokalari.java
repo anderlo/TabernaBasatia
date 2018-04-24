@@ -3,11 +3,12 @@ package kodea;
 import java.util.ArrayList;
 import java.util.Random;
 
+import kartak.Karta;
 import kartak.KartaAnimali;
 
 public abstract class Jokalari {
-	protected ListaKartak eskua  ;
-	protected ListaKartak baraja ;
+	private ListaKartak eskua  ;
+	private ListaKartak baraja ;
 	public Jokalari() {
 		this.eskua 	= new ListaKartak();
 		this.baraja 	= new ListaKartak();
@@ -48,5 +49,11 @@ public abstract class Jokalari {
 	}
 	public ListaKartak getEskua() {
 		return this.eskua;
+	}
+	public void jokatuKarta(String izena) {
+		// TODO Auto-generated method stub
+		Karta karta = getEskua().kartaKendu(izena);
+		//Jokoa.getJokoa().getTablero().getJokoan().
+		//Aqui hay que meter la "karta" en el tablero y hacer la accion de esa karta
 	}
 }
