@@ -1,5 +1,7 @@
 package kodea;
 
+import java.util.LinkedList;
+
 import kartak.*;
 
 public class Tablero {
@@ -9,6 +11,7 @@ public class Tablero {
 	private ListaKartakTableroan jokoan;
 	private Ostikada ostikada;
 	private ZerukoAtea zerukoatea;
+	
 	public static Tablero getTableroa() {
 		// TODO Auto-generated method stub
 		if (nTablero == null) {nTablero = new Tablero();}
