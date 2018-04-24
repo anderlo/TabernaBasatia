@@ -11,12 +11,18 @@ public class ListaKartakTableroan {
 	public ListaKartakTableroan() {
 		this.lehenengoa = null;
 		this.amaierakoa = null;
+		this.counter 	= 0;
 	}
 	public void gehituAnimali(KartaNodo pKarta) {
 		KartaNodo berria = 	pKarta;
+		if (counter==0) {
+			lehenengoa=berria;
+			amaierakoa=berria;
+		}else {
 		this.amaierakoa.setHurrengoa(pKarta);
 		berria.setAurrekoa(this.amaierakoa);
 		this.setAmaierakoa(berria);
+		}	
 		this.counter++;
 	}
 	private void setAmaierakoa(KartaNodo berria) {
@@ -25,11 +31,16 @@ public class ListaKartakTableroan {
 	public void aldatuOrdena() {
 		//tableroa zelan ikusten de aldatzen du
 		KartaNodo aux = lehenengoa;
+		KartaNodo lh = lehenengoa;
+		KartaNodo am = amaierakoa;
 		
 		for (int i = 0; i < this.luzera(); i++) {
 			aux.trukaketa();
 			aux = aux.getAurrekoa();
 		}
+		lehenengoa=am;
+		amaierakoa=lh;
+		
 	}
 	public void kenduAnimali(int pPos) {
 		KartaNodo aux = lehenengoa;
@@ -99,6 +110,7 @@ public class ListaKartakTableroan {
 		KartaNodo	nodo				=	lehenengoa;
 		for (int i = 0; i < this.luzera(); i++) {
 			aux.add(nodo.getKarta());
+			System.out.println("Karta " + i + ": " + nodo.getKarta().getIzena());
 			nodo=nodo.getHurrengoa();
 		}
 		return aux;

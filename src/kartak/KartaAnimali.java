@@ -16,6 +16,7 @@ public class KartaAnimali extends Karta{
 		}
 		this.animalia = this.getClass().getName().split("kartak.")[1];
 		this.setPath();
+		this.setIzena();
 	}	
 	@Override
 	protected void setPath() {

@@ -8,6 +8,10 @@ public class KartaNodo {
 	private KartaNodo 	aurrekoa;
 	private KartaAnimali	karta;
 	
+	public KartaNodo(KartaAnimali karta) {
+		System.out.println("Karta nodo sortu da");
+		this.karta=karta;
+	}
 	
 	public void trukaketa() {
 		KartaNodo aux = this.aurrekoa;
@@ -38,8 +42,12 @@ public class KartaNodo {
 	}
 	
 	public KartaAnimali remove(){
+		if (hurrengoa!=null){
 		hurrengoa.setAurrekoa(this.aurrekoa);
+		}
+		if (aurrekoa !=null){
 		aurrekoa.setHurrengoa(this.hurrengoa);
+		}
 		return (this.karta);
 	}
 	

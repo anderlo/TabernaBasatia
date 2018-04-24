@@ -8,7 +8,7 @@ public abstract class Karta {
 		return this.path;
 	}
 	public void setIzena() {
-		this.izena = this.getClass().getName();
+		this.izena = this.getClass().getName().split("kartak.")[1];
 	}
 	public String getIzena() {
 		return this.izena;
