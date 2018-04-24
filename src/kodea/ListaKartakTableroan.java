@@ -5,6 +5,7 @@ import java.util.*;
 import kartak.KartaAnimali;
 
 public class ListaKartakTableroan {
+	private static ListaKartakTableroan nireListaKartak;
 	private KartaNodo 	lehenengoa;
 	private KartaNodo 	amaierakoa;
 	private int 			counter;
@@ -12,6 +13,12 @@ public class ListaKartakTableroan {
 		this.lehenengoa = null;
 		this.amaierakoa = null;
 		this.counter 	= 0;
+	}
+	public ListaKartakTableroan getNireListaKartakTableroan() {
+		if(nireListaKartak==null) {
+			nireListaKartak=new ListaKartakTableroan();
+		}
+		return nireListaKartak;
 	}
 	public void gehituAnimali(KartaNodo pKarta) {
 		KartaNodo berria = 	pKarta;
@@ -115,4 +122,18 @@ public class ListaKartakTableroan {
 		}
 		return aux;
 	}
+	public void aldatuPos(int pHasi) {
+		//cambiar la kartaAnimali del interior no la informacion aurreko/hurrengo.
+		KartaNodo aux = this.getKartaListan(pHasi);
+		KartaAnimali kAnimali = aux.getKarta();
+		KartaAnimali kAnimaliAux = aux.getHurrengoa().getKarta();
+		aux.setKarta(kAnimaliAux);
+		aux.getHurrengoa().setKarta(kAnimali);
+		
+	}
+	private KartaNodo getKartaListan(int pHasi) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 }
