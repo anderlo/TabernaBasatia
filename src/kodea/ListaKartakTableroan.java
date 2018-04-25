@@ -146,7 +146,7 @@ public class ListaKartakTableroan {
 		}
 		return k;
 	}
-     public ArrayList<KartaAnimali> errekurtsiboakLortu() {
+    public ArrayList<KartaAnimali> errekurtsiboakLortu() {
     		ArrayList<KartaAnimali> animaliak = new ArrayList<KartaAnimali>();
      		if (counter>0){
     		KartaNodo aux = lehenengoa;
@@ -159,5 +159,21 @@ public class ListaKartakTableroan {
      		}
      		return (animaliak);
     	}
+    public int posizioaLortu(String pPath) {
+		int emaitza = -1;
+		boolean aurkituta=false;
+ 		if (counter>0){
+		KartaNodo aux = lehenengoa;
+			while ((aurkituta==false)||(emaitza<=counter)){
+				emaitza++;
+				if (aux.getKarta().getPath()==pPath){
+					aurkituta=true;
+				}else{
+					aux=lehenengoa.getHurrengoa();
+				}
+			}
+ 		}
+ 		return (emaitza);
+	}
 	
 }
