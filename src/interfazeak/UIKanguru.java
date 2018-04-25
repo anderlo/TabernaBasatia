@@ -7,6 +7,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import kartak.Kanguru;
+import kodea.ListaKartakTableroan;
+
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.JRadioButton;
@@ -20,9 +24,11 @@ public class UIKanguru extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private static int zenbatSalto = 0;
 
 	/**
 	 * Launch the application.
+	 * @return 
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -68,6 +74,11 @@ public class UIKanguru extends JFrame {
 		saltoBiBtn.setBounds(109, 34, 39, 23);
 		panel.add(saltoBiBtn);
 		
+		ButtonGroup saltoTaldeBotoiak = new ButtonGroup();
+		saltoTaldeBotoiak.add(saltoBatBtn);
+		saltoTaldeBotoiak.add(saltoBiBtn);
+		setVisible(true);
+		
 		JButton btnAurrera = new JButton("Aurrera");
 		btnAurrera.setBounds(38, 73, 89, 23);
 		panel.add(btnAurrera);
@@ -76,14 +87,17 @@ public class UIKanguru extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				
+				int pHasi = ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1;
+				if(saltoBatBtn.isSelected()) {
+					Kanguru.getOrdenatu().ordenatu(pHasi, 1);
+				}else {
+					Kanguru.getOrdenatu().ordenatu(pHasi, 2);
+				}
+				UIKanguru.this.dispose();
 			}
 			
 		});
 		
-		ButtonGroup saltoTaldeBotoiak = new ButtonGroup();
-		saltoTaldeBotoiak.add(saltoBatBtn);
-		saltoTaldeBotoiak.add(saltoBiBtn);
-		setVisible(true);
+		
 	}
 }
