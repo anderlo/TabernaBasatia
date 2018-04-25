@@ -32,7 +32,10 @@ public class Krokodilo extends KartaAnimali{
 		while (amaituta==false) {
 			if ((aux.getKarta().animaliZenbakia()<10)&&(aux.getKarta().getIzena()!="Zebra")){
 				zenbat++;
-			}else {
+			}else{
+				amaituta=true;
+			}
+			if (aux.getHurrengoa()==null) {
 				amaituta=true;
 			}
 			aux=aux.getHurrengoa();

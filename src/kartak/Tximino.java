@@ -1,23 +1,33 @@
 package kartak;
 
-//Un único mono en la cola, no causa ningún cambio
-//Si un mono adicional(además del primero) llega a la cola, la pandilla de 
-//monos espanta a todos los hipopótamosy los cocodrilos que haya en la 
-//cola, enviándolos a la carta «ES LO QUE HAY». Seguidamente, el mono 
-//recién jugadose cuela delante de todos los animales y se pone el primero de la cola, 
+import kodea.KartaNodo;
+import kodea.ListaKartakTableroan;
+
+//Un ï¿½nico mono en la cola, no causa ningï¿½n cambio
+//Si un mono adicional(ademï¿½s del primero) llega a la cola, la pandilla de 
+//monos espanta a todos los hipopï¿½tamosy los cocodrilos que haya en la 
+//cola, enviï¿½ndolos a la carta ï¿½ES LO QUE HAYï¿½. Seguidamente, el mono 
+//reciï¿½n jugadose cuela delante de todos los animales y se pone el primero de la cola, 
 //delante de la Puerta del Cielo, convocando a sus colegas monos directamente 
-//detrás de él, pero en orden inverso al que se encontraban.
+//detrï¿½s de ï¿½l, pero en orden inverso al que se encontraban.
 
 public class Tximino extends KartaAnimali{
-
+	private OrdenatuNormala 	ordenatu;
+	private BotaNormala 		bota;
 	public Tximino(String kolorea, int zenbakia) {
 		super(kolorea, zenbakia);
 		// TODO Auto-generated constructor stub
+		this.ordenatu 		= 	new OrdenatuNormala();
+		this.bota			=	new BotaNormala();
 		}
 
 	@Override
 	public void animaladaBurutu() {
-		// TODO Auto-generated method stub
+		ListaKartakTableroan tablero = ListaKartakTableroan.getNireListaKartakTableroan();
+		Boolean amaituta 	= 	false;
+		int		zenbat		= 	0;
+		int 		hasiera		=	tablero.posizioaLortu(this.path);
+		KartaNodo	aux		=	tablero.getKartaListan(hasiera);
 		
 	}
 

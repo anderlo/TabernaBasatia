@@ -178,7 +178,7 @@ public class ListaKartakTableroan {
     public ArrayList<Integer> posizioakLortu(String pAnimali) {
 		ArrayList<Integer> emaitza = new ArrayList<Integer>();
 		Integer counter = -1;
- 		if (counter>0){
+ 		if (this.counter>0){
 		KartaNodo aux = lehenengoa;
 			while (aux.getHurrengoa()!=null){
 				counter++;
