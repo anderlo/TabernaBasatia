@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import kartak.Kanguru;
+import kodea.Jokoa;
 import kodea.ListaKartakTableroan;
 
 import javax.swing.JLabel;
@@ -94,6 +95,7 @@ public class UIKanguru extends JFrame {
 					Kanguru.getOrdenatu().ordenatu(pHasi, 2);
 				}
 				UIKanguru.this.dispose();
+				Jokoa.getJokoa().aldatuta();
 			}
 			
 		});

@@ -54,7 +54,6 @@ public class Jokoa extends Observable { //Inplementatu behar
 	public void kartaJokatu(String izena) throws Exception {
 		// TODO Auto-generated method stub
 		getJokalariak().getTurnoaDuenJokalaria().jokatuKarta(izena);
-		Thread.sleep(2000);
 		this.setChanged();
 		notifyObservers();
 		kartaErrekurtsiboakAktibatu();
@@ -64,11 +63,14 @@ public class Jokoa extends Observable { //Inplementatu behar
 		ArrayList<KartaAnimali> animaliak = this.tablero.errekurtsiboakLortu();
 		if (animaliak != null) {
 			for (int i = 0; i < animaliak.size(); i++) {
-				Thread.sleep(2000);
 				animaliak.get(i).animaladaBurutu();
-				this.setChanged();
-				notifyObservers();
+				aldatuta();
 			}
 		}
+	}
+	public void aldatuta() {
+		// TODO Auto-generated method stub
+		this.setChanged();
+		notifyObservers();
 	}
 }

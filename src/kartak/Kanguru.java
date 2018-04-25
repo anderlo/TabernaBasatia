@@ -8,7 +8,7 @@ import kodea.Tablero;
 //(a discreción del jugador), sin importar la fuerza de dichos animales
 public class Kanguru extends KartaAnimali{
 	
-	protected static Ordenatu ordenatuKanguru;
+	protected static OrdenatuNormala ordenatuKanguru;
 
 	public Kanguru(String kolorea, int zenbakia) {
 		super(kolorea, zenbakia);
@@ -19,11 +19,7 @@ public class Kanguru extends KartaAnimali{
 	@Override
 	public void animaladaBurutu() {
 		// TODO Auto-generated method stub
-		if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()==1) {
-			ordenatuKanguru.ordenatu(1, 1);
-		}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>1) {
-			UIKanguru.main(null);
-		}
+		UIKanguru.main(null);
 		
 		
 	}

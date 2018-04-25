@@ -2,7 +2,6 @@ package kodea;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 import kartak.Karta;
 import kartak.KartaAnimali;
@@ -59,11 +58,12 @@ public abstract class Jokalari {
 		}
 	}
 	
-	public void jokatuKarta(String izena) {
+	public void jokatuKarta(String izena) throws Exception {
 		// TODO Auto-generated method stub
 		KartaAnimali karta = getEskua().kartaKendu(izena);
 		barajatikKartaAtera();
 		Jokoa.getJokoa().getTablero().getJokoan().gehituAnimali(new KartaNodo(karta));
+		Jokoa.getJokoa().aldatuta();
 		karta.animaladaBurutu();
 		//Aqui hay que meter la "karta" en el tablero y hacer la accion de esa karta
 	}

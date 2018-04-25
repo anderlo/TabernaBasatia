@@ -127,21 +127,18 @@ public class ListaKartakTableroan {
 		//cambiar la kartaAnimali del interior no la informacion aurreko/hurrengo.
 		//egin JUnit-a
 		KartaNodo aux = this.getKartaListan(pHasi);
-		while(pZenbat!=0&&pHasi!=1) {
+		while(pZenbat!=0&&pHasi!=0) {
 			KartaAnimali kAnimali = aux.getKarta();
-			aux.setKarta(aux.getHurrengoa().getKarta());
-			aux.getHurrengoa().setKarta(kAnimali);
+			aux.setKarta(aux.getAurrekoa().getKarta());
+			aux.getAurrekoa().setKarta(kAnimali);
 			pZenbat--;
 			pHasi--;
 		}
-
 		
 	}
 	public KartaNodo getKartaListan(int pPos) {
 		KartaNodo k=this.lehenengoa;
-		int i=this.luzera()-1;
-		System.out.println(i);
-		System.out.println(pPos);
+		int i=0;
 		while(i!=pPos) {
 			k=k.getHurrengoa();
 			i++;
@@ -151,8 +148,8 @@ public class ListaKartakTableroan {
     public ArrayList<KartaAnimali> errekurtsiboakLortu() {
     		ArrayList<KartaAnimali> animaliak = new ArrayList<KartaAnimali>();
      		if (counter>0){
-    		KartaNodo aux = lehenengoa;
-    			while (aux.getHurrengoa()!=null) {
+     			KartaNodo aux = lehenengoa;
+    			while (aux!=null) {
     				if (aux.getKarta().errekurtsiboaDa()){
     					animaliak.add(aux.getKarta());
     				}
@@ -171,7 +168,7 @@ public class ListaKartakTableroan {
 				if (aux.getKarta().getPath()==pPath){
 					aurkituta=true;
 				}else{
-					aux=lehenengoa.getHurrengoa();
+					aux=aux.getHurrengoa();
 				}
 			}
  		}

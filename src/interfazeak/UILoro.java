@@ -15,6 +15,7 @@ import javax.swing.border.EmptyBorder;
 
 import kartak.KartaAnimali;
 import kartak.Loro;
+import kodea.Jokoa;
 import kodea.ListaKartakTableroan;
 import kodea.Tablero;
 import javax.swing.JButton;
@@ -75,6 +76,7 @@ public class UILoro extends JFrame {
 					// TODO Auto-generated method stub
 					Loro.getBota().tablerotikAtera(0);
 					UILoro.this.dispose();
+					Jokoa.getJokoa().aldatuta();
 				}
 			});
 			
@@ -88,6 +90,7 @@ public class UILoro extends JFrame {
 					// TODO Auto-generated method stub
 					Loro.getBota().tablerotikAtera(1);
 					UILoro.this.dispose();
+					Jokoa.getJokoa().aldatuta();
 				}
 			});
 			
@@ -101,6 +104,7 @@ public class UILoro extends JFrame {
 					// TODO Auto-generated method stub
 					Loro.getBota().tablerotikAtera(2);
 					UILoro.this.dispose();
+					Jokoa.getJokoa().aldatuta();
 				}
 			});
 			
@@ -114,6 +118,7 @@ public class UILoro extends JFrame {
 					// TODO Auto-generated method stub
 					Loro.getBota().tablerotikAtera(3);
 					UILoro.this.dispose();
+					Jokoa.getJokoa().aldatuta();
 				}
 			});
 			setVisible(true);

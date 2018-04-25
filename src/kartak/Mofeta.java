@@ -26,6 +26,7 @@ public class Mofeta extends KartaAnimali{
 		ArrayList<Integer> posizioak = new ArrayList<Integer>();
 		for (int i=0;i>kartak.luzera()-1;i++) {
 			int aux = kartak.getKartaListan(i).getKarta().animaliZenbakia();
+			System.out.println("aux: " + aux);
 			if ((aux>handiena)&&(aux!=1)) {
 				handiena = aux;
 				posizioak.add(i);
@@ -46,7 +47,7 @@ public class Mofeta extends KartaAnimali{
 			}
 		}
 		for (int i = 0; i<posizioak.size();i++) {
-			bota.tablerotikAtera(i);
+			bota.tablerotikAtera(posizioak.get(i));
 		}
 	}
 
