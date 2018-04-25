@@ -21,7 +21,7 @@ public class Tablero {
 	private Tablero(){
 		this.barruan 		= new ListaKartak();
 		this.kanpoan 		= new ListaKartak();
-		this.jokoan  		= new ListaKartakTableroan();
+		this.jokoan  		= ListaKartakTableroan.getNireListaKartakTableroan();
 		this.ostikada		= null;
 		this.zerukoatea		= null;
 		Ostikada karta	 	= (Ostikada)   KartaFactory.getKartaFactory().createKarta("Ostikada");

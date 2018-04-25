@@ -137,10 +137,10 @@ public class ListaKartakTableroan {
 
 		
 	}
-	private KartaNodo getKartaListan(int pHasi) {
+	public KartaNodo getKartaListan(int pPos) {
 		KartaNodo k=this.amaierakoa;
 		int i=this.luzera();
-		while(i!=pHasi) {
+		while(i!=pPos) {
 			k=k.getHurrengoa();
 			i--;
 		}
