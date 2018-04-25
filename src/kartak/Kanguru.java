@@ -19,7 +19,11 @@ public class Kanguru extends KartaAnimali{
 	@Override
 	public void animaladaBurutu() {
 		// TODO Auto-generated method stub
-		UIKanguru.main(null);
+		if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
+			ordenatuKanguru.ordenatu(1, 1);
+		}else if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
+			UIKanguru.main(null);
+		}
 		
 		
 	}
