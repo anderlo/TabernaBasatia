@@ -5,7 +5,7 @@ import kodea.ListaKartakTableroan;
 
 //Un cocodrilo se come a cualquier animal 
 //m�s d�bil 
-//que tenga 
+//que tenga zadsadadsad
 //por delante. Si mientras 
 //come se topa con un animal m�s fuerte o con una cebra, el cocodrilo se detiene de inmediato.
 //Los animales comidos van a parar a la carta �ES LO QUE HAY
@@ -43,4 +43,5 @@ public class Krokodilo extends KartaAnimali{
 		this.bota.tablerotikAtera(hasiera,zenbat);
 	}
 
+	
 }

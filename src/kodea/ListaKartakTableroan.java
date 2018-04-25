@@ -3,7 +3,7 @@ package kodea;
 import java.util.*;
 
 import kartak.KartaAnimali;
-
+//
 public class ListaKartakTableroan {
 	private static ListaKartakTableroan nireListaKartak;
 	private KartaNodo 	lehenengoa;
