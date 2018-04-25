@@ -14,12 +14,11 @@ public class ListaKartakTableroan {
 		this.amaierakoa = null;
 		this.counter 	= 0;
 	}
-	public ListaKartakTableroan getNireListaKartakTableroan() {
+	public static ListaKartakTableroan getNireListaKartakTableroan() {
 		if(nireListaKartak==null) {
 			nireListaKartak=new ListaKartakTableroan();
 		}
-		return nireListaKartak;
-	}
+		return nireListaKartak;	}
 	public void gehituAnimali(KartaNodo pKarta) {
 		KartaNodo berria = 	pKarta;
 		if (counter==0) {
@@ -122,18 +121,28 @@ public class ListaKartakTableroan {
 		}
 		return aux;
 	}
-	public void aldatuPos(int pHasi) {
+	public void aldatuPos(int pHasi, int pZenbat) {
 		//cambiar la kartaAnimali del interior no la informacion aurreko/hurrengo.
+		//egin JUnit-a
 		KartaNodo aux = this.getKartaListan(pHasi);
-		KartaAnimali kAnimali = aux.getKarta();
-		KartaAnimali kAnimaliAux = aux.getHurrengoa().getKarta();
-		aux.setKarta(kAnimaliAux);
-		aux.getHurrengoa().setKarta(kAnimali);
+		while(pZenbat!=0||pHasi==1) {
+			KartaAnimali kAnimali = aux.getKarta();
+			aux.setKarta(aux.getHurrengoa().getKarta());
+			aux.getHurrengoa().setKarta(kAnimali);
+			pZenbat--;
+			pHasi--;
+		}
+
 		
 	}
 	private KartaNodo getKartaListan(int pHasi) {
-		// TODO Auto-generated method stub
-		return null;
+		KartaNodo k=this.amaierakoa;
+		int i=this.luzera();
+		while(i!=pHasi) {
+			k=k.getHurrengoa();
+			i--;
+		}
+		return k;
 	}
 	
 }
