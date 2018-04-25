@@ -62,41 +62,41 @@ public class UITablero extends JFrame implements Observer {
 		lblOstikada.setBounds(958, 242, 143, 251);
 		panel.add(lblOstikada);
 		
-		ArrayList<KartaAnimali> kartak = Jokoa.getJokoa().getTablero().getBarruan().getKartak();
+		ArrayList<KartaAnimali> kartak = Jokoa.getJokoa().getTablero().getJokoan().getKartak();
 		
 		if (kartak.size()>0) {
-			ImageIcon imageKarta1 = new ImageIcon (new ImageIcon(kartak.get(0).getPath()).getImage().getScaledInstance(143, 251, Image.SCALE_DEFAULT));
+			ImageIcon imageKarta1 = new ImageIcon (new ImageIcon(kartak.get(0).getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
 			JLabel karta1 = new JLabel(imageKarta1);
 			karta1.setBounds(193, 371, 143, 122);
 			panel.add(karta1);
 		}
 		
 		if (kartak.size()>1) {
-			JTextArea textKarta2 = new JTextArea();
-			textKarta2.setText("Karta2");
-			textKarta2.setBounds(346, 371, 143, 122);
-			panel.add(textKarta2);
+			ImageIcon imageKarta2 = new ImageIcon (new ImageIcon(kartak.get(1).getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
+			JLabel karta2 = new JLabel(imageKarta2);
+			karta2.setBounds(193, 371, 143, 122);
+			panel.add(karta2);
 		}
 		
 		if (kartak.size()>2) {
-			JTextArea textKarta3 = new JTextArea();
-			textKarta3.setText("Karta3");
-			textKarta3.setBounds(499, 371, 143, 122);
-			panel.add(textKarta3);
+			ImageIcon imageKarta3 = new ImageIcon (new ImageIcon(kartak.get(2).getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
+			JLabel karta3 = new JLabel(imageKarta3);
+			karta3.setBounds(193, 371, 143, 122);
+			panel.add(karta3);
 		}
 		
 		if (kartak.size()>3) {
-			JTextArea textKarta4 = new JTextArea();
-			textKarta4.setText("Karta4");
-			textKarta4.setBounds(652, 371, 143, 122);
-			panel.add(textKarta4);
+			ImageIcon imageKarta4 = new ImageIcon (new ImageIcon(kartak.get(3).getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
+			JLabel karta4 = new JLabel(imageKarta4);
+			karta4.setBounds(193, 371, 143, 122);
+			panel.add(karta4);
 		}
 		
 		if (kartak.size()>4) {
-			JTextArea textKarta5 = new JTextArea();
-			textKarta5.setText("Karta5");
-			textKarta5.setBounds(805, 371, 143, 122);
-			panel.add(textKarta5);
+			ImageIcon imageKarta5 = new ImageIcon (new ImageIcon(kartak.get(4).getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
+			JLabel karta5 = new JLabel(imageKarta5);
+			karta5.setBounds(193, 371, 143, 122);
+			panel.add(karta5);
 		}
 		
 		ImageIcon image3 = new ImageIcon (new ImageIcon("Images/TabernaBasatia.jpg").getImage().getScaledInstance(250, 314, Image.SCALE_DEFAULT));

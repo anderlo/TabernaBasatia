@@ -57,14 +57,14 @@ public class Jokoa extends Observable { //Inplementatu behar
 		kartaErrekurtsiboakAktibatu();
 		this.setChanged();
 		notifyObservers();
-		System.out.println(this.countObservers());
 	}
 	private void kartaErrekurtsiboakAktibatu() {
 		// TODO Auto-generated method stub
-		ArrayList<KartaAnimali> animaliak = new ArrayList<KartaAnimali>();
-		animaliak = this.tablero.errekurtsiboakLortu();
-		for (int i = 0; i < animaliak.size(); i++) {
-			animaliak.get(i).animaladaBurutu();
+		ArrayList<KartaAnimali> animaliak = this.tablero.errekurtsiboakLortu();
+		if (animaliak != null) {
+			for (int i = 0; i < animaliak.size(); i++) {
+				animaliak.get(i).animaladaBurutu();
+			}
 		}
 	}
 }

@@ -61,9 +61,9 @@ public abstract class Jokalari {
 	
 	public void jokatuKarta(String izena) {
 		// TODO Auto-generated method stub
-		Karta karta = getEskua().kartaKendu(izena);
+		KartaAnimali karta = getEskua().kartaKendu(izena);
 		barajatikKartaAtera();
-		//Jokoa.getJokoa().getTablero().getJokoan().
+		Jokoa.getJokoa().getTablero().getJokoan().gehituAnimali(new KartaNodo(karta));
 		//Aqui hay que meter la "karta" en el tablero y hacer la accion de esa karta
 	}
 }

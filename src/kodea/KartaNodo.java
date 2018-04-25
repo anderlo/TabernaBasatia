@@ -9,7 +9,6 @@ public class KartaNodo {
 	private KartaAnimali	karta;
 	
 	public KartaNodo(KartaAnimali karta) {
-		System.out.println("Karta nodo sortu da");
 		this.karta=karta;
 	}
 	
