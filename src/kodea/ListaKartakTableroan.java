@@ -175,5 +175,19 @@ public class ListaKartakTableroan {
  		}
  		return (emaitza);
 	}
-	
+    public ArrayList<Integer> posizioakLortu(String pAnimali) {
+		ArrayList<Integer> emaitza = new ArrayList<Integer>();
+		Integer counter = -1;
+ 		if (counter>0){
+		KartaNodo aux = lehenengoa;
+			while (aux.getHurrengoa()!=null){
+				counter++;
+				if (aux.getKarta().getIzena()==pAnimali){
+					emaitza.add(counter);
+				}
+					aux=lehenengoa.getHurrengoa();
+			}
+ 		}
+ 		return (emaitza);
+	}
 }
