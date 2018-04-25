@@ -14,4 +14,10 @@ public class Zebra extends KartaAnimali{
 		this.errekurrentea=true;
 	}
 
+	@Override
+	public void animaladaBurutu() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -15,4 +15,10 @@ public class Tximino extends KartaAnimali{
 		// TODO Auto-generated constructor stub
 		}
 
+	@Override
+	public void animaladaBurutu() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
