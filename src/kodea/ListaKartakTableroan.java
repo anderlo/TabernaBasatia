@@ -144,5 +144,18 @@ public class ListaKartakTableroan {
 		}
 		return k;
 	}
+     public ArrayList<KartaAnimali> errekurtsiboakLortu() {
+    		ArrayList<KartaAnimali> animaliak = new ArrayList<KartaAnimali>();
+    		animaliak = null;
+     		if (counter>0){
+    			KartaNodo aux = lehenengoa;
+    			while (aux.getHurrengoa()!=null) {
+    				if (aux.getKarta().errekurtsiboaDa()){
+     					animaliak.add(aux.getKarta());
+     				}
+     			}
+     		}
+     		return (animaliak);
+    	}
 	
 }

@@ -1,5 +1,6 @@
 package kodea;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import kartak.*;
@@ -69,6 +70,9 @@ public class Tablero {
 	}
 	public void ateraKanpora(KartaAnimali pKarta) {
 		this.kanpoan.add(pKarta);
+	}
+	public ArrayList<KartaAnimali> errekurtsiboakLortu() {
+		return(this.jokoan.errekurtsiboakLortu());
 	}
 
 }

@@ -38,7 +38,7 @@ class TestKartaFactory {
 		KartaAnimali karta1;
 		for (int i = 0; i < 12; i++) {
 			karta1 = KartaFactory.getKartaFactory().createKarta("Berdea", i+1);
-			assertEquals("/Images/"+animaliak[i]+"Berdea.png", karta1.getPath());	
+			assertEquals("Images/"+animaliak[i]+"Berdea.jpg", karta1.getPath());	
 		}
 		//2 EGOERA : Zenbakia ondo kolorea txarto (sortuko du baina kolore balioan ez du ezer edukiko)
 		KartaAnimali karta2 ;

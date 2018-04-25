@@ -1,6 +1,6 @@
 package kartak;
 
-public class KartaAnimali extends Karta{
+public abstract class KartaAnimali extends Karta{
 	protected String animalia;
 	protected String kolore;
 	protected int zenbakia;
@@ -34,4 +34,5 @@ public class KartaAnimali extends Karta{
 	public boolean errekurtsiboaDa() {
 		return this.errekurrentea;
 	}
+	public abstract void animaladaBurutu();
 }

@@ -51,16 +51,20 @@ public class Jokoa extends Observable { //Inplementatu behar
 	public Tablero getTablero() {
 		return tablero;
 	}
-	
 	public void kartaJokatu(String izena) {
 		// TODO Auto-generated method stub
 		getJokalariak().getTurnoaDuenJokalaria().jokatuKarta(izena);
 		kartaErrekurtsiboakAktibatu();
+		this.setChanged();
 		notifyObservers();
+		System.out.println(this.countObservers());
 	}
-	
 	private void kartaErrekurtsiboakAktibatu() {
 		// TODO Auto-generated method stub
-		//Hacer la accion de todas las cartas que hay en el tablero excepto la que se acaba de jugar
+		ArrayList<KartaAnimali> animaliak = new ArrayList<KartaAnimali>();
+		animaliak = this.tablero.errekurtsiboakLortu();
+		for (int i = 0; i < animaliak.size(); i++) {
+			animaliak.get(i).animaladaBurutu();
+		}
 	}
 }
