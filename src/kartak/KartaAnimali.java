@@ -5,8 +5,6 @@ public abstract class KartaAnimali extends Karta{
 	protected String kolore;
 	protected int zenbakia;
 	protected Boolean errekurrentea;
-	protected Ordenatu ord;
-	protected Bota bota; 
 	public KartaAnimali(String kolorea,int zenbakia) {
 		this.kolore 		= null;
 		this.zenbakia 		= zenbakia;

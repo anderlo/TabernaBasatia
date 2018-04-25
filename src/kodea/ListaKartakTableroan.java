@@ -127,7 +127,7 @@ public class ListaKartakTableroan {
 		//cambiar la kartaAnimali del interior no la informacion aurreko/hurrengo.
 		//egin JUnit-a
 		KartaNodo aux = this.getKartaListan(pHasi);
-		while(pZenbat!=0||pHasi==1) {
+		while(pZenbat!=0&&pHasi!=1) {
 			KartaAnimali kAnimali = aux.getKarta();
 			aux.setKarta(aux.getHurrengoa().getKarta());
 			aux.getHurrengoa().setKarta(kAnimali);
