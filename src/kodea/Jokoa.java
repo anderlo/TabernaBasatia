@@ -51,19 +51,23 @@ public class Jokoa extends Observable { //Inplementatu behar
 	public Tablero getTablero() {
 		return tablero;
 	}
-	public void kartaJokatu(String izena) {
+	public void kartaJokatu(String izena) throws Exception {
 		// TODO Auto-generated method stub
 		getJokalariak().getTurnoaDuenJokalaria().jokatuKarta(izena);
-		kartaErrekurtsiboakAktibatu();
+		Thread.sleep(2000);
 		this.setChanged();
 		notifyObservers();
+		kartaErrekurtsiboakAktibatu();
 	}
-	private void kartaErrekurtsiboakAktibatu() {
+	private void kartaErrekurtsiboakAktibatu() throws Exception {
 		// TODO Auto-generated method stub
 		ArrayList<KartaAnimali> animaliak = this.tablero.errekurtsiboakLortu();
 		if (animaliak != null) {
 			for (int i = 0; i < animaliak.size(); i++) {
+				Thread.sleep(2000);
 				animaliak.get(i).animaladaBurutu();
+				this.setChanged();
+				notifyObservers();
 			}
 		}
 	}

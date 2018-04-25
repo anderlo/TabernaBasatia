@@ -52,7 +52,12 @@ public class UIKarta extends JButton implements MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		Jokoa.getJokoa().kartaJokatu(izena);
+		try {
+			Jokoa.getJokoa().kartaJokatu(izena);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 }
