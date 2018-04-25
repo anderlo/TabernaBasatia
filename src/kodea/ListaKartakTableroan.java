@@ -190,7 +190,7 @@ public class ListaKartakTableroan {
  		}
  		return (emaitza);
 	}
-    public ArrayList<Integer> listakoLvlAkLortu(String pAnimali) {
+    public ArrayList<Integer> listakoLvlAkLortu() {
 		ArrayList<Integer> emaitza = new ArrayList<Integer>();
  		if (this.counter>0){
 		KartaNodo aux = lehenengoa;
