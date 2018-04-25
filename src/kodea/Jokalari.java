@@ -64,6 +64,7 @@ public abstract class Jokalari {
 		KartaAnimali karta = getEskua().kartaKendu(izena);
 		barajatikKartaAtera();
 		Jokoa.getJokoa().getTablero().getJokoan().gehituAnimali(new KartaNodo(karta));
+		karta.animaladaBurutu();
 		//Aqui hay que meter la "karta" en el tablero y hacer la accion de esa karta
 	}
 }

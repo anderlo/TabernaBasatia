@@ -138,11 +138,13 @@ public class ListaKartakTableroan {
 		
 	}
 	public KartaNodo getKartaListan(int pPos) {
-		KartaNodo k=this.amaierakoa;
-		int i=this.luzera();
+		KartaNodo k=this.lehenengoa;
+		int i=this.luzera()-1;
+		System.out.println(i);
+		System.out.println(pPos);
 		while(i!=pPos) {
 			k=k.getHurrengoa();
-			i--;
+			i++;
 		}
 		return k;
 	}
@@ -164,7 +166,7 @@ public class ListaKartakTableroan {
 		boolean aurkituta=false;
  		if (counter>0){
 		KartaNodo aux = lehenengoa;
-			while ((aurkituta==false)||(emaitza<=counter)){
+			while ((aurkituta==false)&&(emaitza<=counter)){
 				emaitza++;
 				if (aux.getKarta().getPath()==pPath){
 					aurkituta=true;

@@ -32,6 +32,7 @@ public class Lehoi extends KartaAnimali{
 		ListaKartakTableroan kartak = Jokoa.getJokoa().getTablero().getJokoan();
 		boolean lehoiBatDago = false;
 		for (int i=0;(i<kartak.luzera()-1)&&!(lehoiBatDago);i++ ) {
+			System.out.println(i);
 			if (kartak.getKartaListan(i).getKarta().getIzena().equals("Lehoi")) {
 				lehoiBatDago=true;
 			}

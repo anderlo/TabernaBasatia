@@ -22,7 +22,9 @@ public class Jirafa extends KartaAnimali{
 		// TODO Auto-generated method stub
 		ListaKartakTableroan kartak = Jokoa.getJokoa().getTablero().getJokoan();
 		int pos = kartak.posizioaLortu(path);
+		System.out.println(pos);
 		if (kartak.getKartaListan(pos-1).getKarta().animaliZenbakia()<this.zenbakia) {
+			System.out.println("hola");
 			ordenatu.ordenatu(pos, 1);
 		}
 	}
