@@ -190,4 +190,16 @@ public class ListaKartakTableroan {
  		}
  		return (emaitza);
 	}
+    public ArrayList<Integer> listakoLvlAkLortu(String pAnimali) {
+		ArrayList<Integer> emaitza = new ArrayList<Integer>();
+ 		if (this.counter>0){
+		KartaNodo aux = lehenengoa;
+			while (aux.getHurrengoa()!=null){
+				counter++;
+				emaitza.add(aux.getKarta().animaliZenbakia());
+				aux=lehenengoa.getHurrengoa();
+			}
+ 		}
+ 		return (emaitza);
+	}
 }
