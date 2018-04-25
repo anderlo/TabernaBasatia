@@ -74,28 +74,28 @@ public class UITablero extends JFrame implements Observer {
 		if (kartak.size()>1) {
 			ImageIcon imageKarta2 = new ImageIcon (new ImageIcon(kartak.get(1).getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
 			JLabel karta2 = new JLabel(imageKarta2);
-			karta2.setBounds(193, 371, 143, 122);
+			karta2.setBounds(346, 371, 143, 122);
 			panel.add(karta2);
 		}
 		
 		if (kartak.size()>2) {
 			ImageIcon imageKarta3 = new ImageIcon (new ImageIcon(kartak.get(2).getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
 			JLabel karta3 = new JLabel(imageKarta3);
-			karta3.setBounds(193, 371, 143, 122);
+			karta3.setBounds(499, 371, 143, 122);
 			panel.add(karta3);
 		}
 		
 		if (kartak.size()>3) {
 			ImageIcon imageKarta4 = new ImageIcon (new ImageIcon(kartak.get(3).getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
 			JLabel karta4 = new JLabel(imageKarta4);
-			karta4.setBounds(193, 371, 143, 122);
+			karta4.setBounds(652, 371, 143, 122);
 			panel.add(karta4);
 		}
 		
 		if (kartak.size()>4) {
 			ImageIcon imageKarta5 = new ImageIcon (new ImageIcon(kartak.get(4).getPath()).getImage().getScaledInstance(143, 122, Image.SCALE_DEFAULT));
 			JLabel karta5 = new JLabel(imageKarta5);
-			karta5.setBounds(193, 371, 143, 122);
+			karta5.setBounds(805, 371, 143, 122);
 			panel.add(karta5);
 		}
 		

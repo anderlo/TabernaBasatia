@@ -26,9 +26,9 @@ public class ListaKartakTableroan {
 			lehenengoa=berria;
 			amaierakoa=berria;
 		}else {
-		this.amaierakoa.setHurrengoa(pKarta);
-		berria.setAurrekoa(this.amaierakoa);
-		this.setAmaierakoa(berria);
+			this.amaierakoa.setHurrengoa(pKarta);
+			berria.setAurrekoa(this.amaierakoa);
+			this.setAmaierakoa(berria);
 		}	
 		this.counter++;
 	}
