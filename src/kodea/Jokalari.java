@@ -2,6 +2,7 @@ package kodea;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import kartak.Karta;
 import kartak.KartaAnimali;
@@ -50,9 +51,18 @@ public abstract class Jokalari {
 	public ListaKartak getEskua() {
 		return this.eskua;
 	}
+	
+	public void barajatikKartaAtera(){
+		if (baraja.kopurua()!=0){
+			KartaAnimali karta = baraja.kartaKendu(0);
+			eskua.add(karta);
+		}
+	}
+	
 	public void jokatuKarta(String izena) {
 		// TODO Auto-generated method stub
 		Karta karta = getEskua().kartaKendu(izena);
+		barajatikKartaAtera();
 		//Jokoa.getJokoa().getTablero().getJokoan().
 		//Aqui hay que meter la "karta" en el tablero y hacer la accion de esa karta
 	}

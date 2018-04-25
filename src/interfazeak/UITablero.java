@@ -2,6 +2,7 @@ package interfazeak;
 
 import java.awt.BorderLayout;
 import java.awt.Image;
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -10,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import kartak.KartaAnimali;
 import kodea.Jokoa;
 
 import javax.swing.JLabel;
@@ -50,8 +52,8 @@ public class UITablero extends JFrame implements Observer {
 		panel.setLayout(null);
 		
 		
-		ImageIcon image = new ImageIcon (new ImageIcon("Images/ZerukoAtea.jpg").getImage().getScaledInstance(143, 251, Image.SCALE_DEFAULT));
-		JLabel lblZerukoAtea = new JLabel(image);
+		ImageIcon image1 = new ImageIcon (new ImageIcon("Images/ZerukoAtea.jpg").getImage().getScaledInstance(143, 251, Image.SCALE_DEFAULT));
+		JLabel lblZerukoAtea = new JLabel(image1);
 		lblZerukoAtea.setBounds(40, 242, 143, 251);
 		panel.add(lblZerukoAtea);
 		
@@ -60,30 +62,42 @@ public class UITablero extends JFrame implements Observer {
 		lblOstikada.setBounds(958, 242, 143, 251);
 		panel.add(lblOstikada);
 		
-		JTextArea textKarta1 = new JTextArea();
-		textKarta1.setText("Karta1");
-		textKarta1.setBounds(193, 371, 143, 122);
-		panel.add(textKarta1);
+		ArrayList<KartaAnimali> kartak = Jokoa.getJokoa().getTablero().getBarruan().getKartak();
 		
-		JTextArea textKarta2 = new JTextArea();
-		textKarta2.setText("Karta2");
-		textKarta2.setBounds(346, 371, 143, 122);
-		panel.add(textKarta2);
+		if (kartak.size()>0) {
+			ImageIcon imageKarta1 = new ImageIcon (new ImageIcon(kartak.get(0).getPath()).getImage().getScaledInstance(143, 251, Image.SCALE_DEFAULT));
+			JLabel karta1 = new JLabel(imageKarta1);
+			karta1.setBounds(193, 371, 143, 122);
+			panel.add(karta1);
+		}
 		
-		JTextArea textKarta3 = new JTextArea();
-		textKarta3.setText("Karta3");
-		textKarta3.setBounds(499, 371, 143, 122);
-		panel.add(textKarta3);
+		if (kartak.size()>1) {
+			JTextArea textKarta2 = new JTextArea();
+			textKarta2.setText("Karta2");
+			textKarta2.setBounds(346, 371, 143, 122);
+			panel.add(textKarta2);
+		}
 		
-		JTextArea textKarta4 = new JTextArea();
-		textKarta4.setText("Karta4");
-		textKarta4.setBounds(652, 371, 143, 122);
-		panel.add(textKarta4);
+		if (kartak.size()>2) {
+			JTextArea textKarta3 = new JTextArea();
+			textKarta3.setText("Karta3");
+			textKarta3.setBounds(499, 371, 143, 122);
+			panel.add(textKarta3);
+		}
 		
-		JTextArea textKarta5 = new JTextArea();
-		textKarta5.setText("Karta5");
-		textKarta5.setBounds(805, 371, 143, 122);
-		panel.add(textKarta5);
+		if (kartak.size()>3) {
+			JTextArea textKarta4 = new JTextArea();
+			textKarta4.setText("Karta4");
+			textKarta4.setBounds(652, 371, 143, 122);
+			panel.add(textKarta4);
+		}
+		
+		if (kartak.size()>4) {
+			JTextArea textKarta5 = new JTextArea();
+			textKarta5.setText("Karta5");
+			textKarta5.setBounds(805, 371, 143, 122);
+			panel.add(textKarta5);
+		}
 		
 		ImageIcon image3 = new ImageIcon (new ImageIcon("Images/TabernaBasatia.jpg").getImage().getScaledInstance(250, 314, Image.SCALE_DEFAULT));
 		JLabel lblTabernaBasatia = new JLabel(image3);
@@ -101,6 +115,6 @@ public class UITablero extends JFrame implements Observer {
 	@Override
 	public void update(Observable o, Object arg) {
 		// TODO Auto-generated method stub
-		System.out.println("tableroa aldatu da");
-	}
+		uiTableroaSortu();
+		}
 }
