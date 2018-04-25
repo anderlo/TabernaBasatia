@@ -1,5 +1,7 @@
 package kartak;
 
+import kodea.ListaKartakTableroan;
+
 //Al jugar una foca, se intercambia la posici�n de la Puerta del Cielo con la de la 
 //carta de patada.
 public class Foka extends KartaAnimali{
@@ -11,8 +13,7 @@ public class Foka extends KartaAnimali{
 
 	@Override
 	public void animaladaBurutu() {
-		// TODO Auto-generated method stub
-		
+		ListaKartakTableroan.getNireListaKartakTableroan().aldatuOrdena();
 	}
 
 }
