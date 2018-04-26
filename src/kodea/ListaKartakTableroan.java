@@ -203,6 +203,7 @@ public class ListaKartakTableroan {
 	}
 	public void ordSugea() {
 		boolean ordenatuta=true;
+		int i=0;
 		KartaNodo k=this.lehenengoa;
 		while(this.counter!=0 && k.getHurrengoa()!=null) {
 			if(k.getKarta().animaliZenbakia()<k.getHurrengoa().getKarta().animaliZenbakia()) {
@@ -211,6 +212,7 @@ public class ListaKartakTableroan {
 				k.getHurrengoa().setKarta(an);
 				ordenatuta=false;
 			}
+			k=k.getHurrengoa();
 		}
 		if(!ordenatuta) {
 			this.ordSugea();

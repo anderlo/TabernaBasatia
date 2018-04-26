@@ -9,18 +9,17 @@ import kodea.ListaKartakTableroan;
 //cola frente a la Puerta del Cielo, y los demás animales se ordenan detrás de él según su 
 //fuerza. Los miembros de la misma especie no intercambian sus posiciones.
 public class Suge extends KartaAnimali{
-	private OrdenatuNormala ord;
+	private OrdenatuHanditikTxikira ord;
 	public Suge(String kolorea, int zenbakia) {
 		super(kolorea, zenbakia);
 		// TODO Auto-generated constructor stub
-		this.ord=new OrdenatuNormala();
+		this.ord=new OrdenatuHanditikTxikira();
 	}
 
 	@Override
 	public void animaladaBurutu() {
 		// TODO Auto-generated method stub
-		ListaKartakTableroan lk=ListaKartakTableroan.getNireListaKartakTableroan();
-		ArrayList<Integer> lista=lk.listakoLvlAkLortu();
+		this.ord.ordenatu();
 		
 	}
 }
