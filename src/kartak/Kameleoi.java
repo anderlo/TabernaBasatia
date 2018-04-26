@@ -1,4 +1,7 @@
 package kartak;
+
+import interfazeak.UIKameleoi;
+
 //El camaleón realiza la animalada de una de las especies que haya en la cola.
 //Para efectuar dicha animalada (y solo en ese caso), el camaleón adopta 
 //también la fuerza de la especie imitada. Pero en cuanto se llevan a cabo las 
@@ -14,7 +17,7 @@ public class Kameleoi extends KartaAnimali{
 	@Override
 	public void animaladaBurutu() {
 		// TODO Auto-generated method stub
-		
+		UIKameleoi.main(null);
 	}
 
 }

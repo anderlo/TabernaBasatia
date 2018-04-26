@@ -17,9 +17,9 @@ public class Loro extends KartaAnimali{
 	@Override
 	public void animaladaBurutu() {
 		// TODO Auto-generated method stub
-		if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()==1) {
+		if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
 			botaLoro.tablerotikAtera(0);
-		}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>1) {
+		}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
 			UILoro.main(null);
 		}
 	}

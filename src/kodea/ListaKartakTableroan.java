@@ -6,6 +6,7 @@ import kartak.KartaAnimali;
 //
 public class ListaKartakTableroan {
 	private static ListaKartakTableroan nireListaKartak;
+	private KameleoiEgoera egoera;
 	private KartaNodo 	lehenengoa;
 	private KartaNodo 	amaierakoa;
 	private int 			counter;
@@ -13,6 +14,7 @@ public class ListaKartakTableroan {
 		this.lehenengoa = null;
 		this.amaierakoa = null;
 		this.counter 	= 0;
+		this.egoera 	= new KameleoiaEzJokoan();
 	}
 	public static ListaKartakTableroan getNireListaKartakTableroan() {
 		if(nireListaKartak==null) {
@@ -219,4 +221,11 @@ public class ListaKartakTableroan {
 		}
 		
 	}
+	//State
+    public void aldatuEgoera_1() {
+    	this.egoera = new KameleoiJokoan();
+    }
+    public void aldatuEgoera_2() {
+    	this.egoera = new KameleoiaEzJokoan();
+    }
 }

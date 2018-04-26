@@ -4,11 +4,13 @@ public abstract class KartaAnimali extends Karta{
 	protected String animalia;
 	protected String kolore;
 	protected int zenbakia;
+	protected boolean egoeraBerezia;
 	protected Boolean errekurrentea;
 	public KartaAnimali(String kolorea,int zenbakia) {
 		this.kolore 		= null;
 		this.zenbakia 		= zenbakia;
 		this.errekurrentea 	= false;
+		this.egoeraBerezia 	= false;
 		if (kolorea =="Urdina"||kolorea=="Berdea") {
 			this.kolore 		= kolorea;
 		}
@@ -28,6 +30,22 @@ public abstract class KartaAnimali extends Karta{
 	}
 	public int animaliZenbakia() {
 		return this.zenbakia;
+	}
+	public void setIzena(String pIzena) {
+		this.izena = pIzena;
+	}
+	public void setZenbakia(int pZenbakia) {
+		this.zenbakia = pZenbakia;
+	}
+	public void aldatuEgoeraBerezia() {
+		if(this.egoeraBerezia) {
+			this.egoeraBerezia = false;
+		}else {
+			this.egoeraBerezia = true;
+		}
+	}
+	public boolean getEgoeraBerezia() {
+		return this.egoeraBerezia;
 	}
 	public boolean errekurtsiboaDa() {
 		return this.errekurrentea;
