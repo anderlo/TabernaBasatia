@@ -53,7 +53,7 @@ public class ListaKartakTableroan {
 	}
 	public void kenduAnimali(int pPos) {
 		KartaNodo aux = lehenengoa;
-		for (int i = 1; i < pPos; i++) {
+		for (int i = 0; i < pPos; i++) {
 			aux=aux.getHurrengoa();
 		}
 		aux.remove();
@@ -200,5 +200,21 @@ public class ListaKartakTableroan {
 			}
  		}
  		return (emaitza);
+	}
+	public void ordSugea() {
+		boolean ordenatuta=true;
+		KartaNodo k=this.lehenengoa;
+		while(this.counter!=0 && k.getHurrengoa()!=null) {
+			if(k.getKarta().animaliZenbakia()<k.getHurrengoa().getKarta().animaliZenbakia()) {
+				KartaAnimali an=k.getKarta();
+				k.setKarta(k.getHurrengoa().getKarta());
+				k.getHurrengoa().setKarta(an);
+				ordenatuta=false;
+			}
+		}
+		if(!ordenatuta) {
+			this.ordSugea();
+		}
+		
 	}
 }
