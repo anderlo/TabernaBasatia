@@ -37,16 +37,6 @@ public abstract class KartaAnimali extends Karta{
 	public void setZenbakia(int pZenbakia) {
 		this.zenbakia = pZenbakia;
 	}
-	public void aldatuEgoeraBerezia() {
-		if(this.egoeraBerezia) {
-			this.egoeraBerezia = false;
-		}else {
-			this.egoeraBerezia = true;
-		}
-	}
-	public boolean getEgoeraBerezia() {
-		return this.egoeraBerezia;
-	}
 	public boolean errekurtsiboaDa() {
 		return this.errekurrentea;
 	}

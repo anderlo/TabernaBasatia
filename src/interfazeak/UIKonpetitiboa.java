@@ -148,7 +148,7 @@ public class UIKonpetitiboa extends JFrame {
             int aux;
             if (source.isSelected()) {
             	hautatuak.add(bilatuKartaZenb(source.getText()));
-               aux = UIKonpetitiboa.getKonpetitiboa().counterGehitu();
+                aux = UIKonpetitiboa.getKonpetitiboa().counterGehitu();
                 // check for max selections:
                 if (aux == MAX_SELECTIONS) {
                     for (JCheckBox box: buttons)
@@ -159,7 +159,12 @@ public class UIKonpetitiboa extends JFrame {
                 }
             }
             else {
-            		aux =UIKonpetitiboa.getKonpetitiboa().counterKendu();
+            	aux =UIKonpetitiboa.getKonpetitiboa().counterKendu();
+            	for (int i = 0; i < hautatuak.size(); i++) {
+					if(hautatuak.get(i)==bilatuKartaZenb(source.getText())){
+						hautatuak.remove(i);
+					}
+            	}
                 // check for less than max selections:
                 if (aux < MAX_SELECTIONS)
                     for (JCheckBox box: buttons)

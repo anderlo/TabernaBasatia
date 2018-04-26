@@ -23,9 +23,9 @@ public class Hipopotamo extends KartaAnimali{
 	public void animaladaBurutu() {
 		// TODO Auto-generated method stub
 		ListaKartakTableroan kartak = Jokoa.getJokoa().getTablero().getJokoan();
-		int pos = kartak.posizioaLortu(path);
 		boolean amaitu = false;
-		for (int i=0; (i<pos)&&!(amaitu);i++){
+		int pos = kartak.posizioaLortu(path);
+		for (int i=0; (i<pos)&&!(amaitu);pos = kartak.posizioaLortu(path)){
 			if (kartak.getKartaListan(pos-1).getKarta().getIzena().equals("Hipopotamo")||
 				kartak.getKartaListan(pos-1).getKarta().getIzena().equals("Lehoi")||
 				kartak.getKartaListan(pos-1).getKarta().getIzena().equals("Zebra")){

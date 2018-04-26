@@ -71,11 +71,6 @@ public class UIKameleoi extends JFrame {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).setIzena(kartak.get(0).getIzena());
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).setZenbakia(kartak.get(0).animaliZenbakia());
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).aldatuEgoeraBerezia();
-					kartak.get(0).animaladaBurutu();
-					ListaKartakTableroan.getNireListaKartakTableroan().aldatuEgoera_1();
 					UIKameleoi.this.dispose();
 				}
 			});
@@ -88,11 +83,6 @@ public class UIKameleoi extends JFrame {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).setIzena(kartak.get(1).getIzena());
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).setZenbakia(kartak.get(1).animaliZenbakia());
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).aldatuEgoeraBerezia();
-					kartak.get(1).animaladaBurutu();
-					ListaKartakTableroan.getNireListaKartakTableroan().aldatuEgoera_1();
 					UIKameleoi.this.dispose();
 				}
 			});
@@ -105,11 +95,6 @@ public class UIKameleoi extends JFrame {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).setIzena(kartak.get(2).getIzena());
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).setZenbakia(kartak.get(2).animaliZenbakia());
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).aldatuEgoeraBerezia();
-					kartak.get(2).animaladaBurutu();
-					ListaKartakTableroan.getNireListaKartakTableroan().aldatuEgoera_1();
 					UIKameleoi.this.dispose();
 				}
 			});
@@ -122,11 +107,6 @@ public class UIKameleoi extends JFrame {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).setIzena(kartak.get(3).getIzena());
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).setZenbakia(kartak.get(3).animaliZenbakia());
-					kartak.get(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1).aldatuEgoeraBerezia();
-					kartak.get(3).animaladaBurutu();
-					ListaKartakTableroan.getNireListaKartakTableroan().aldatuEgoera_1();
 					UIKameleoi.this.dispose();
 				}
 			});
