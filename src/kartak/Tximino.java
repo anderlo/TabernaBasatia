@@ -1,5 +1,7 @@
 package kartak;
 
+import java.util.ArrayList;
+
 import kodea.KartaNodo;
 import kodea.ListaKartakTableroan;
 
@@ -28,6 +30,25 @@ public class Tximino extends KartaAnimali{
 		int		zenbat		= 	0;
 		int 		hasiera		=	tablero.posizioaLortu(this.path);
 		KartaNodo	aux		=	tablero.getKartaListan(hasiera);
+		
+		ArrayList<Integer> non = tablero.posizioakLortu("Tximino");
+		if (non != null ) {
+			ArrayList<Integer> non2 = tablero.posizioakLortu("Hipopotamo");
+			if(non2!=null) {
+				for (int i = 0; i < non2.size(); i++) {
+					bota.tablerotikAtera(non2.get(i));
+				}
+			}
+			ArrayList<Integer> non3 = tablero.posizioakLortu("Krokodilo");
+			if(non3!=null) {
+				for (int j = 0; j < non3.size(); j++) {
+					bota.tablerotikAtera(non3.get(j));
+				}	
+			}
+			for (int x = 0; x < non.size(); x++) {
+				this.ordenatu.ordenatu(non.get(x),tablero.luzera()-non.get(x)-x);
+			}
+		}
 		
 	}
 
