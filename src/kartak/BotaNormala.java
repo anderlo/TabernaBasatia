@@ -16,7 +16,7 @@ public class BotaNormala implements Bota {
 		int aux2 = pZenbat;
 		ListaKartakTableroan ik = Tablero.getTableroa().getJokoan();
 		while (aux2!=0) {
-			ik.kenduAnimali(aux1+aux2);
+			ik.kenduAnimali(aux1-aux2);
 			aux2--;
 		}
 			

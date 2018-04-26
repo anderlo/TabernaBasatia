@@ -6,7 +6,6 @@ import kartak.KartaAnimali;
 //
 public class ListaKartakTableroan {
 	private static ListaKartakTableroan nireListaKartak;
-	private KameleoiEgoera egoera;
 	private KartaNodo 	lehenengoa;
 	private KartaNodo 	amaierakoa;
 	private int 			counter;
@@ -14,7 +13,6 @@ public class ListaKartakTableroan {
 		this.lehenengoa = null;
 		this.amaierakoa = null;
 		this.counter 	= 0;
-		this.egoera 	= new KameleoiaEzJokoan();
 	}
 	public static ListaKartakTableroan getNireListaKartakTableroan() {
 		if(nireListaKartak==null) {
@@ -38,6 +36,9 @@ public class ListaKartakTableroan {
 	private void setAmaierakoa(KartaNodo berria) {
 		this.amaierakoa=berria;
 	}
+	public void setLehenengoa(KartaNodo animalia) {
+		lehenengoa = animalia;
+	}	
 	
 	public void aldatuOrdena() {
 		//tableroa zelan ikusten de aldatzen du
@@ -58,9 +59,19 @@ public class ListaKartakTableroan {
 		for (int i = 0; i < pPos; i++) {
 			aux=aux.getHurrengoa();
 		}
+		
+		if (pPos==0) {
+			setLehenengoa(aux.getHurrengoa());
+			lehenengoa.setAurrekoa(null);
+		}else if (pPos==counter) {
+			setAmaierakoa(aux.getAurrekoa());
+			amaierakoa.setHurrengoa(null);
+		}
 		aux.remove();
 		this.counter--;
 	}
+	
+
 	public void egikarituLista() {
 		//Animaladak turnoak amaitzerakoan egiten ditu, bakarrik errekurtsiboak
 //		KartaAnimali an=null;
@@ -203,7 +214,7 @@ public class ListaKartakTableroan {
  		}
  		return (emaitza);
 	}
-	public void ordSugea() {
+    public void ordSugea() {
 		boolean ordenatuta=true;
 		int i=0;
 		KartaNodo k=this.lehenengoa;
@@ -221,11 +232,4 @@ public class ListaKartakTableroan {
 		}
 		
 	}
-	//State
-    public void aldatuEgoera_1() {
-    	this.egoera = new KameleoiJokoan();
-    }
-    public void aldatuEgoera_2() {
-    	this.egoera = new KameleoiaEzJokoan();
-    }
 }
