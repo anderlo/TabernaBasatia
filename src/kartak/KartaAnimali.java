@@ -41,4 +41,16 @@ public abstract class KartaAnimali extends Karta{
 		return this.errekurrentea;
 	}
 	public abstract void animaladaBurutu();
+	
+	public void aldatuEgoeraBerezia() {
+		if(!egoeraBerezia) {
+			egoeraBerezia = true;
+		}else {
+			egoeraBerezia = false;
+		}
+	}
+	public boolean getEgoeraBerezia() {
+		// TODO Auto-generated method stub
+		return egoeraBerezia;
+	}
 }

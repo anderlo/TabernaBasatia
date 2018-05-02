@@ -51,6 +51,48 @@ public class KartaFactory {
 		}
 		return karta;
 	}
+	public int lortuZenb (String pIzena) {
+		int zenb = -1;
+		switch (pIzena) {
+		case "Mofeta":
+			zenb = 1;
+			break;
+		case "Loro":
+			zenb = 2;
+			break;
+		case "Kanguru":
+			zenb = 3;
+			break;
+		case "Tximino":
+			zenb = 4;
+			break;
+		case "Kameleoi":
+			zenb = 5;
+			break;
+		case "Foka":
+			zenb = 6;
+			break;
+		case "Zebra":
+			zenb = 7;
+			break;
+		case "Jirafa":
+			zenb = 8;
+			break;
+		case "Suge":
+			zenb = 9;
+			break;
+		case "Krokodilo":
+			zenb = 10;
+			break;
+		case "Hipopotamo":
+			zenb = 11;
+			break;
+		case "Lehoi":
+			zenb = 12;
+			break;
+		}
+		return zenb;
+	}
 	public KartaBerezia createKarta (String izena) {
 		KartaBerezia karta = null;
 		if ((izena=="ostikada") || (izena=="Ostikada")){

@@ -2,7 +2,9 @@ package kodea;
 
 import java.util.*;
 
+import kartak.Kameleoi;
 import kartak.KartaAnimali;
+import kartak.KartaFactory;
 //
 public class ListaKartakTableroan {
 	private static ListaKartakTableroan nireListaKartak;
@@ -71,61 +73,20 @@ public class ListaKartakTableroan {
 		this.counter--;
 	}
 	
-
-	public void egikarituLista() {
-		//Animaladak turnoak amaitzerakoan egiten ditu, bakarrik errekurtsiboak
-//		KartaAnimali an=null;
-//		if(this.ordenean) {
-//			for (int i=this.luzera()-1;i>=0;i--) {
-//				an=this.kartak.get(i);
-//				if(an.errekurtsiboaDa()) {
-//					//EGIN ANIMALADA
-//				}
-//			}
-//		}else {
-//			for (int i=0;i<this.luzera();i++) {
-//				an=this.kartak.get(i);
-//				if(an.errekurtsiboaDa()) {
-//					//EGIN ANIMALADA
-//				}
-//			}
-//		}
-		
-		
-	}
 	public int luzera() {
 		return(this.counter);
 	}
 	public void zeruaKalea() {
-		
-		//MIERDON BTW
-		
-		//Animaladen ostean bost karta baleudeneko kasuan zerura edo kalera mugitzen ditu kartak, ordena begiratuz
-//		if(this.ordenean) {
-//			KartaAnimali k1=this.kartak.get(0);
-//			Tablero tab=Tablero.getTableroa();
-//			tab.sartuZeruan(k1);
-//			this.kartak.remove(0);
-//			k1=this.kartak.get(0);
-//			tab.sartuZeruan(k1);
-//			this.kartak.remove(0);
-//			k1=this.kartak.get(2);
-//			tab.ateraKanpora(k1);
-//			this.kartak.remove(2);
-//		}else {
-//			KartaAnimali k1=this.kartak.get(4);
-//			Tablero tab=Tablero.getTableroa();
-//			tab.sartuZeruan(k1);
-//			this.kartak.remove(4);
-//			k1=this.kartak.get(3);
-//			tab.sartuZeruan(k1);
-//			this.kartak.remove(3);
-//			k1=this.kartak.get(0);
-//			tab.ateraKanpora(k1);
-//			this.kartak.remove(0);
-//		}
-//
-		
+		Tablero.getTableroa().getBarruan().add(lehenengoa.getKarta());
+		this.kenduAnimali(0);
+		Jokoa.getJokoa().aldatuta();
+		Tablero.getTableroa().getBarruan().add(lehenengoa.getKarta());
+		this.kenduAnimali(0);
+		Jokoa.getJokoa().aldatuta();
+		Tablero.getTableroa().getKanpoan().add(amaierakoa.getKarta());
+		this.kenduAnimali(this.luzera()-1);
+		Jokoa.getJokoa().aldatuta();
+	
 }
 	public ArrayList<KartaAnimali> getKartak(){
 		ArrayList<KartaAnimali> 	aux = 	new ArrayList<KartaAnimali>();
@@ -216,7 +177,6 @@ public class ListaKartakTableroan {
 	}
     public void ordSugea() {
 		boolean ordenatuta=true;
-		int i=0;
 		KartaNodo k=this.lehenengoa;
 		while(this.counter!=0 && k.getHurrengoa()!=null) {
 			if(k.getKarta().animaliZenbakia()<k.getHurrengoa().getKarta().animaliZenbakia()) {
@@ -231,5 +191,15 @@ public class ListaKartakTableroan {
 			this.ordSugea();
 		}
 		
+	}
+	public void aldatuKamaleoia() {
+		// TODO Auto-generated method stub
+		KartaNodo aux = lehenengoa;
+		while (aux!=null) {
+			if (aux.getKarta().getEgoeraBerezia()) {
+				aux.setKarta(KartaFactory.getKartaFactory().createKarta(Jokoa.getJokoa().getJokalariak().getKolorea(), 5));
+			}
+			aux=aux.getHurrengoa();
+		}
 	}
 }

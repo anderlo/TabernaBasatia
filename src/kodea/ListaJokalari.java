@@ -34,4 +34,11 @@ public class ListaJokalari {
 	public void ezabatuJokalaria(int nZ) {
 		this.jokalari.remove(nZ);
 	}
+	public String getKolorea() {
+		if(this.getTurnoaDuenJokalaria() instanceof Pertsona) {
+			return "Urdina";
+		}else {
+			return "Berdea";
+		}
+	}
 }

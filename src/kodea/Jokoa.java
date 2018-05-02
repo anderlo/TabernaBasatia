@@ -10,10 +10,12 @@ public class Jokoa extends Observable { //Inplementatu behar
 	private static Jokoa nJokoa;
 	private ListaJokalari jokalariak;
 	private Tablero tablero;
+	private boolean kamaleoiaJokatu;
 	private Jokoa() {
 		super();
 		tablero = Tablero.getTableroa();
 		jokalariak = ListaJokalari.getNireListaJokalari();
+		kamaleoiaJokatu = false;
 	}
 	public static Jokoa getJokoa() {
 		if (nJokoa==null){
@@ -57,6 +59,9 @@ public class Jokoa extends Observable { //Inplementatu behar
 		this.setChanged();
 		notifyObservers();
 		kartaErrekurtsiboakAktibatu();
+		if(this.tablero.getJokoan().luzera()==5) {
+			this.tablero.getJokoan().zeruaKalea();
+		}
 	}
 	private void kartaErrekurtsiboakAktibatu() throws Exception {
 		// TODO Auto-generated method stub
@@ -66,11 +71,28 @@ public class Jokoa extends Observable { //Inplementatu behar
 				animaliak.get(i).animaladaBurutu();
 				aldatuta();
 			}
+			if (kamaleoiaJokatu) {
+				kamaleoiaBilatu();
+				kamaleoiaJokatu = false;
+				aldatuta();
+			}
 		}
+	}
+	private void kamaleoiaBilatu() {
+		// TODO Auto-generated method stub
+		ListaKartakTableroan.getNireListaKartakTableroan().aldatuKamaleoia();
 	}
 	public void aldatuta() {
 		// TODO Auto-generated method stub
 		this.setChanged();
 		notifyObservers();
+	}
+	public void kamaleoiEgoera() {
+		// TODO Auto-generated method stub
+		if(!kamaleoiaJokatu) {
+			kamaleoiaJokatu = true;
+		}else {
+			kamaleoiaJokatu = false;
+		}
 	}
 }
