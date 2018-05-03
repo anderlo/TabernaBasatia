@@ -31,7 +31,7 @@ public class UILoro extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static boolean main() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -42,6 +42,7 @@ public class UILoro extends JFrame {
 				}
 			}
 		});
+		return true;
 	}
 
 	/**
@@ -49,6 +50,8 @@ public class UILoro extends JFrame {
 	 */
 	public UILoro() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		UIEskua.getUIEskua().setEnabled(false);
+		UITablero.getTableroa().setEnabled(false);
 		setBounds(100, 100, 616, 300);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
@@ -76,6 +79,8 @@ public class UILoro extends JFrame {
 					// TODO Auto-generated method stub
 					Loro.getBota().tablerotikAtera(0);
 					UILoro.this.dispose();
+					UIEskua.getUIEskua().setEnabled(true);
+					UITablero.getTableroa().setEnabled(true);
 					Jokoa.getJokoa().aldatuta();
 				}
 			});
@@ -90,6 +95,8 @@ public class UILoro extends JFrame {
 					// TODO Auto-generated method stub
 					Loro.getBota().tablerotikAtera(1);
 					UILoro.this.dispose();
+					UIEskua.getUIEskua().setEnabled(true);
+					UITablero.getTableroa().setEnabled(true);
 					Jokoa.getJokoa().aldatuta();
 				}
 			});
@@ -104,6 +111,8 @@ public class UILoro extends JFrame {
 					// TODO Auto-generated method stub
 					Loro.getBota().tablerotikAtera(2);
 					UILoro.this.dispose();
+					UIEskua.getUIEskua().setEnabled(true);
+					UITablero.getTableroa().setEnabled(true);
 					Jokoa.getJokoa().aldatuta();
 				}
 			});
@@ -118,6 +127,8 @@ public class UILoro extends JFrame {
 					// TODO Auto-generated method stub
 					Loro.getBota().tablerotikAtera(3);
 					UILoro.this.dispose();
+					UIEskua.getUIEskua().setEnabled(true);
+					UITablero.getTableroa().setEnabled(true);
 					Jokoa.getJokoa().aldatuta();
 				}
 			});

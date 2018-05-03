@@ -17,7 +17,7 @@ public class Kameleoi extends KartaAnimali{
 	@Override
 	public void animaladaBurutu() {
 		// TODO Auto-generated method stub
-		UIKameleoi.main(null);
+		UIKameleoi.main();
 	}
 
 }

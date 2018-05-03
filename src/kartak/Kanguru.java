@@ -22,7 +22,7 @@ public class Kanguru extends KartaAnimali{
 		if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
 			ordenatuKanguru.ordenatu(1, 1);
 		}else if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
-			UIKanguru.main(null);
+			UIKanguru.main();
 		}
 		
 		

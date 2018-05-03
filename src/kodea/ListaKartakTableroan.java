@@ -58,19 +58,25 @@ public class ListaKartakTableroan {
 	}
 	public void kenduAnimali(int pPos) {
 		KartaNodo aux = lehenengoa;
-		for (int i = 0; i < pPos; i++) {
-			aux=aux.getHurrengoa();
+		
+		if(counter!=0) {
+			if (pPos==0) {
+				setLehenengoa(aux.getHurrengoa());
+				lehenengoa.setAurrekoa(null);
+			}else if (pPos==counter-1) {
+				aux=amaierakoa;
+				setAmaierakoa(aux.getAurrekoa());
+				amaierakoa.setHurrengoa(null);
+			}else {
+				for (int i = 0; i < pPos; i++) {
+					aux=aux.getHurrengoa();
+				}
+				aux.getAurrekoa().setHurrengoa(aux.getHurrengoa());
+				aux.getHurrengoa().setAurrekoa(aux.getAurrekoa());
+			}
+			this.counter--;
 		}
 		
-		if (pPos==0) {
-			setLehenengoa(aux.getHurrengoa());
-			lehenengoa.setAurrekoa(null);
-		}else if (pPos==counter) {
-			setAmaierakoa(aux.getAurrekoa());
-			amaierakoa.setHurrengoa(null);
-		}
-		aux.remove();
-		this.counter--;
 	}
 	
 	public int luzera() {
@@ -153,12 +159,13 @@ public class ListaKartakTableroan {
 		Integer counter = -1;
  		if (this.counter>0){
 		KartaNodo aux = lehenengoa;
+		emaitza.add(this.counter-1);
 			while (aux.getHurrengoa()!=null){
 				counter++;
-				if (aux.getKarta().getIzena()==pAnimali){
+				if (aux.getKarta().getIzena().equals(pAnimali)){
 					emaitza.add(counter);
 				}
-					aux=lehenengoa.getHurrengoa();
+					aux=aux.getHurrengoa();
 			}
  		}
  		return (emaitza);

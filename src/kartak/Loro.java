@@ -20,7 +20,7 @@ public class Loro extends KartaAnimali{
 		if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
 			botaLoro.tablerotikAtera(0);
 		}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
-			UILoro.main(null);
+			UILoro.main();
 		}
 	}
 	

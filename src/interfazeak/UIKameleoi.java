@@ -32,7 +32,7 @@ public class UIKameleoi extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static boolean main() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -43,6 +43,7 @@ public class UIKameleoi extends JFrame {
 				}
 			}
 		});
+		return true;
 	}
 
 	/**
@@ -50,6 +51,8 @@ public class UIKameleoi extends JFrame {
 	 */
 	public UIKameleoi() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		UIEskua.getUIEskua().setEnabled(false);
+		UITablero.getTableroa().setEnabled(false);
 		setBounds(100, 100, 228, 300);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
@@ -64,13 +67,13 @@ public class UIKameleoi extends JFrame {
 		ArrayList<KartaAnimali> kartak = ListaKartakTableroan.getNireListaKartakTableroan().getKartak();
 		kartak.remove(kartak.size()-1);
 		KartaNodo kN = ListaKartakTableroan.getNireListaKartakTableroan().getKartaListan(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1);
-		
 		//Try catch-aren bidez tableroan 4 karta baino gutxiago daudenean agertzen den errorea saihesten dugu.
 		try {
 			
 			JButton btnNewButton = new JButton(kartak.get(0).getIzena());
 			btnNewButton.setBounds(66, 55, 89, 23);
 			panel.add(btnNewButton);
+			
 			btnNewButton.addActionListener(new ActionListener() {
 				
 				@Override
@@ -82,6 +85,8 @@ public class UIKameleoi extends JFrame {
 					kN.setKarta(ka);
 					Jokoa.getJokoa().kamaleoiEgoera();
 					kN.getKarta().animaladaBurutu();
+					UIEskua.getUIEskua().setEnabled(true);
+					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
 				}
 			});
@@ -100,6 +105,8 @@ public class UIKameleoi extends JFrame {
 					kN.setKarta(ka);
 					Jokoa.getJokoa().kamaleoiEgoera();
 					kN.getKarta().animaladaBurutu();
+					UIEskua.getUIEskua().setEnabled(true);
+					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
 				}
 			});
@@ -118,6 +125,8 @@ public class UIKameleoi extends JFrame {
 					kN.setKarta(ka);
 					Jokoa.getJokoa().kamaleoiEgoera();
 					kN.getKarta().animaladaBurutu();
+					UIEskua.getUIEskua().setEnabled(true);
+					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
 				}
 			});
@@ -136,11 +145,13 @@ public class UIKameleoi extends JFrame {
 					kN.setKarta(ka);
 					Jokoa.getJokoa().kamaleoiEgoera();
 					kN.getKarta().animaladaBurutu();
+					UIEskua.getUIEskua().setEnabled(true);
+					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
 				}
 			});
-			setVisible(true);
 			
+			setVisible(true);
 			panel.setLayout(null);
 			
 		} catch (IndexOutOfBoundsException e) {

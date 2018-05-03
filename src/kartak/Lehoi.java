@@ -31,18 +31,23 @@ public class Lehoi extends KartaAnimali{
 		// TODO Auto-generated method stub
 		ListaKartakTableroan kartak = Jokoa.getJokoa().getTablero().getJokoan();
 		boolean lehoiBatDago = false;
-		for (int i=0;(i<kartak.luzera()-1)&&!(lehoiBatDago);i++ ) {
+		int n=0;
+		for (int i=0;(i<kartak.luzera())&&!(lehoiBatDago);i++ ) {
 			System.out.println(i);
 			if (kartak.getKartaListan(i).getKarta().getIzena().equals("Lehoi")) {
-				lehoiBatDago=true;
+				n++;
+				if(n==2) {
+					lehoiBatDago=true;
+				}
 			}
 		}
-		if (lehoiBatDago){
+		if (!lehoiBatDago){
 			for (int i=0;(i<kartak.luzera()-1);i++ ) {
 				if (kartak.getKartaListan(i).getKarta().getIzena().equals("Tximino")) {
 					bota.tablerotikAtera(i);
 				}
 			}
+			ordenatu.ordenatu(kartak.luzera()-1, kartak.luzera()-1);
 		}
 		else {
 			bota.tablerotikAtera(kartak.posizioaLortu(path));

@@ -32,7 +32,7 @@ public class UIKanguru extends JFrame {
 	 * Launch the application.
 	 * @return 
 	 */
-	public static void main(String[] args) {
+	public static boolean main() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -43,6 +43,7 @@ public class UIKanguru extends JFrame {
 				}
 			}
 		});
+		return true;
 	}
 
 	/**
@@ -50,6 +51,8 @@ public class UIKanguru extends JFrame {
 	 */
 	public UIKanguru() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		UIEskua.getUIEskua().setEnabled(false);
+		UITablero.getTableroa().setEnabled(false);
 		setBounds(100, 100, 183, 147);
 		contentPane = new JPanel();
 		setLocationRelativeTo(null);
@@ -96,6 +99,8 @@ public class UIKanguru extends JFrame {
 					Kanguru.getOrdenatu().ordenatu(pHasi, 2);
 				}
 				UIKanguru.this.dispose();
+				UIEskua.getUIEskua().setEnabled(true);
+				UITablero.getTableroa().setEnabled(true);
 				Jokoa.getJokoa().aldatuta();
 			}
 			

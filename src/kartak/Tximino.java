@@ -32,21 +32,14 @@ public class Tximino extends KartaAnimali{
 		KartaNodo	aux		=	tablero.getKartaListan(hasiera);
 		
 		ArrayList<Integer> non = tablero.posizioakLortu("Tximino");
-		if (non != null ) {
-			ArrayList<Integer> non2 = tablero.posizioakLortu("Hipopotamo");
-			if(non2!=null) {
-				for (int i = 0; i < non2.size(); i++) {
-					bota.tablerotikAtera(non2.get(i));
+		if (non.size()>=2 ) {
+			for (int i=0;(i<tablero.luzera()-1);i++ ) {
+				if (tablero.getKartaListan(i).getKarta().getIzena().equals("Hipopotamo")||tablero.getKartaListan(i).getKarta().getIzena().equals("Krokodilo")) {
+					bota.tablerotikAtera(i);
 				}
 			}
-			ArrayList<Integer> non3 = tablero.posizioakLortu("Krokodilo");
-			if(non3!=null) {
-				for (int j = 0; j < non3.size(); j++) {
-					bota.tablerotikAtera(non3.get(j));
-				}	
-			}
 			for (int x = 0; x < non.size(); x++) {
-				this.ordenatu.ordenatu(non.get(x),tablero.luzera()-non.get(x)-x);
+				this.ordenatu.ordenatu(non.get(x)+x,non.get(x));
 			}
 		}
 		
