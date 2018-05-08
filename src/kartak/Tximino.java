@@ -24,7 +24,7 @@ public class Tximino extends KartaAnimali{
 		}
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		ListaKartakTableroan tablero = ListaKartakTableroan.getNireListaKartakTableroan();
 		Boolean amaituta 	= 	false;
 		int		zenbat		= 	0;
@@ -42,7 +42,7 @@ public class Tximino extends KartaAnimali{
 				this.ordenatu.ordenatu(non.get(x)+x,non.get(x));
 			}
 		}
-		
+		return true;
 	}
 
 }

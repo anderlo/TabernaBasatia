@@ -20,7 +20,7 @@ public class Hipopotamo extends KartaAnimali{
 	}
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
 		ListaKartakTableroan kartak = Jokoa.getJokoa().getTablero().getJokoan();
 		boolean amaitu = false;
@@ -35,6 +35,7 @@ public class Hipopotamo extends KartaAnimali{
 				ordenatu.ordenatu(pos-i, 1);
 			}
 		}
+		return true;
 		
 	}
 

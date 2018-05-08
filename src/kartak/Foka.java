@@ -12,8 +12,9 @@ public class Foka extends KartaAnimali{
 	}
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		ListaKartakTableroan.getNireListaKartakTableroan().aldatuOrdena();
+		return true;
 	}
 
 }

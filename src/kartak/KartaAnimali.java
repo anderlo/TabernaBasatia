@@ -40,7 +40,7 @@ public abstract class KartaAnimali extends Karta{
 	public boolean errekurtsiboaDa() {
 		return this.errekurrentea;
 	}
-	public abstract void animaladaBurutu();
+	public abstract boolean animaladaBurutu();
 	
 	public void aldatuEgoeraBerezia() {
 		if(!egoeraBerezia) {

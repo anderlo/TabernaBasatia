@@ -88,6 +88,17 @@ public class UIKameleoi extends JFrame {
 					UIEskua.getUIEskua().setEnabled(true);
 					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
+					try {
+						Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					Jokoa.getJokoa().aldatuta();
+					if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
+						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
+					}
+					Jokoa.getJokoa().aldatuta();
 				}
 			});
 			
@@ -108,6 +119,17 @@ public class UIKameleoi extends JFrame {
 					UIEskua.getUIEskua().setEnabled(true);
 					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
+					try {
+						Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					Jokoa.getJokoa().aldatuta();
+					if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
+						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
+					}
+					Jokoa.getJokoa().aldatuta();
 				}
 			});
 			
@@ -128,6 +150,17 @@ public class UIKameleoi extends JFrame {
 					UIEskua.getUIEskua().setEnabled(true);
 					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
+					try {
+						Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					Jokoa.getJokoa().aldatuta();
+					if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
+						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
+					}
+					Jokoa.getJokoa().aldatuta();
 				}
 			});
 			
@@ -148,6 +181,17 @@ public class UIKameleoi extends JFrame {
 					UIEskua.getUIEskua().setEnabled(true);
 					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
+					try {
+						Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					Jokoa.getJokoa().aldatuta();
+					if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
+						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
+					}
+					Jokoa.getJokoa().aldatuta();
 				}
 			});
 			

@@ -15,13 +15,16 @@ public class Loro extends KartaAnimali{
 	
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
+		boolean jokatuta = false;
 		if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
 			botaLoro.tablerotikAtera(0);
+			jokatuta = true;
 		}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
 			UILoro.main();
 		}
+		return jokatuta;
 	}
 	
 	public static Bota getBota() {

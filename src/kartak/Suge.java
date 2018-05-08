@@ -17,9 +17,9 @@ public class Suge extends KartaAnimali{
 	}
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
 		this.ord.ordenatu();
-		
+		return true;
 	}
 }

@@ -27,7 +27,7 @@ public class Lehoi extends KartaAnimali{
 	}
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
 		ListaKartakTableroan kartak = Jokoa.getJokoa().getTablero().getJokoan();
 		boolean lehoiBatDago = false;
@@ -52,6 +52,7 @@ public class Lehoi extends KartaAnimali{
 		else {
 			bota.tablerotikAtera(kartak.posizioaLortu(path));
 		}
+		return true;
 	}
 
 }

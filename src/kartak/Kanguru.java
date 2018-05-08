@@ -17,15 +17,16 @@ public class Kanguru extends KartaAnimali{
 	}
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
+		boolean jokatuta = false;
 		if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
 			ordenatuKanguru.ordenatu(1, 1);
+			jokatuta = true;
 		}else if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
 			UIKanguru.main();
 		}
-		
-		
+		return jokatuta;
 	}
 	public static Ordenatu getOrdenatu() {
 		return ordenatuKanguru;

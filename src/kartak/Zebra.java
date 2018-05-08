@@ -15,9 +15,9 @@ public class Zebra extends KartaAnimali{
 	}
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
-		
+		return true;
 	}
 
 }

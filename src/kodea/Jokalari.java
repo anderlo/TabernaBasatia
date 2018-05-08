@@ -58,15 +58,16 @@ public abstract class Jokalari {
 		}
 	}
 	
-	public void jokatuKarta(String izena) throws Exception {
+	public boolean jokatuKarta(String izena) throws Exception {
 		// TODO Auto-generated method stub
+		boolean jokatuta = false;
 		KartaAnimali karta = getEskua().kartaKendu(izena);
 		barajatikKartaAtera();
 		Jokoa.getJokoa().getTablero().getJokoan().gehituAnimali(new KartaNodo(karta));
 		Jokoa.getJokoa().aldatuta();
-		karta.animaladaBurutu();
+		jokatuta = karta.animaladaBurutu();
 		
 		Jokoa.getJokoa().aldatuta();
-		//Aqui hay que meter la "karta" en el tablero y hacer la accion de esa karta
+		return jokatuta;
 	}
 }

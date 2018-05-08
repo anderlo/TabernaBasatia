@@ -55,18 +55,19 @@ public class Jokoa extends Observable { //Inplementatu behar
 	}
 	public void kartaJokatu(String izena) throws Exception {
 		// TODO Auto-generated method stub
-		getJokalariak().getTurnoaDuenJokalaria().jokatuKarta(izena);
+		boolean jokatuta = getJokalariak().getTurnoaDuenJokalaria().jokatuKarta(izena);
 		aldatuta();
 		
-
-		kartaErrekurtsiboakAktibatu();
-		aldatuta();
-		if(this.tablero.getJokoan().luzera()==5) {
-			this.tablero.getJokoan().zeruaKalea();
+		if (jokatuta){
+			kartaErrekurtsiboakAktibatu();
+			aldatuta();
+			if(this.tablero.getJokoan().luzera()==5) {
+				this.tablero.getJokoan().zeruaKalea();
+			}
+			aldatuta();
 		}
-		aldatuta();
 	}
-	private void kartaErrekurtsiboakAktibatu() throws Exception {
+	public void kartaErrekurtsiboakAktibatu() throws Exception {
 		// TODO Auto-generated method stub
 		ArrayList<KartaAnimali> animaliak = this.tablero.errekurtsiboakLortu();
 		if (animaliak != null) {

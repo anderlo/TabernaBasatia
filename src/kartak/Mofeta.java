@@ -18,7 +18,7 @@ public class Mofeta extends KartaAnimali{
 	}
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
 		ListaKartakTableroan kartak = Jokoa.getJokoa().getTablero().getJokoan();
 		int handiena = 0;
@@ -48,6 +48,7 @@ public class Mofeta extends KartaAnimali{
 		for (int i = 0; i<posizioak.size();i++) {
 			bota.tablerotikAtera(posizioak.get(i));
 		}
+		return true;
 	}
 
 }

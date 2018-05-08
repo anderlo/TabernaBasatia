@@ -18,7 +18,7 @@ public class Jirafa extends KartaAnimali{
 	}
 
 	@Override
-	public void animaladaBurutu() {
+	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
 		ListaKartakTableroan kartak = Jokoa.getJokoa().getTablero().getJokoan();
 		int pos = kartak.posizioaLortu(path);
@@ -27,6 +27,7 @@ public class Jirafa extends KartaAnimali{
 				ordenatu.ordenatu(pos, 1);
 			}
 		}
+		return true;
 	}
 
 }
