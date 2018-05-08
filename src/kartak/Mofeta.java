@@ -27,26 +27,21 @@ public class Mofeta extends KartaAnimali{
 		for (int i=0;i<kartak.luzera();i++) {
 			int aux = kartak.getKartaListan(i).getKarta().animaliZenbakia();
 			if ((aux>handiena)&&(aux!=1)) {
+				handiena2=handiena;
 				handiena = aux;
-				posizioak.add(i);
 			}
-			else {
-				if ((aux!=handiena)&&(aux>handiena2)&&(aux!=1)){
+			else if ((aux!=handiena)&&(aux>handiena2)&&(aux!=1)){
 					handiena2 = aux;
-					posizioak.add(i);
-				}
-				else {
-					if (aux==handiena) {
-						posizioak.add(i);
-					}
-					if (aux==handiena2) {
-						posizioak.add(i);
-					}
-				}
+			}
+		}
+		for (int i=0;i<kartak.luzera();i++) {
+			int aux = kartak.getKartaListan(i).getKarta().animaliZenbakia();
+			if(aux==handiena||aux==handiena2) {
+				posizioak.add(i);
 			}
 		}
 		for (int i = 0; i<posizioak.size();i++) {
-			bota.tablerotikAtera(posizioak.get(i));
+			bota.tablerotikAtera(posizioak.get(i)-i);
 		}
 		return true;
 	}
