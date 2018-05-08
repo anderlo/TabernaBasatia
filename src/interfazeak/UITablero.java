@@ -1,12 +1,16 @@
 package interfazeak;
 
 import java.awt.BorderLayout;
+import java.awt.Frame;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -16,6 +20,7 @@ import kodea.Jokoa;
 
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class UITablero extends JFrame implements Observer {
 	/**
@@ -24,6 +29,7 @@ public class UITablero extends JFrame implements Observer {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private static UITablero uiTablero;
+	
 	
 	public static UITablero getTableroa() {
 		if (uiTablero==null) {
@@ -44,7 +50,7 @@ public class UITablero extends JFrame implements Observer {
 		setBounds(100, 100, 1164, 590);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.setLayout(new BorderLayout(0, 0)); 
 		setContentPane(contentPane);
 		
 		JPanel panel = new JPanel();
@@ -108,6 +114,46 @@ public class UITablero extends JFrame implements Observer {
 		JLabel lblTokatuZaizu = new JLabel(image4);
 		lblTokatuZaizu.setBounds(652, 23, 250, 314);
 		panel.add(lblTokatuZaizu);
+		
+		JLabel nirePuntuak = new JLabel("Nire Puntuak");
+		nirePuntuak.setBounds(70,10,75,40);
+		nirePuntuak.setVisible(true);
+		panel.add(nirePuntuak);
+		
+		JTextField puntuak = new JTextField();
+		puntuak.setBounds(100, 25, 50, 50);
+		puntuak.setBorder(null);
+		puntuak.setVisible(true);
+		puntuak.setEditable(false);
+		puntuak.setText(Jokoa.getJokoa().lortuPuntuak(1));
+		panel.add(puntuak);
+		
+		JLabel berePuntuak = new JLabel("Bere Puntuak");
+		berePuntuak.setBounds(70,60,80,40);
+		berePuntuak.setVisible(true);
+		panel.add(berePuntuak);
+		
+		JTextField puntuak_2 = new JTextField();
+		puntuak_2.setBounds(100, 75, 50, 50);
+		puntuak_2.setBorder(null);
+		puntuak_2.setVisible(true);
+		puntuak_2.setEditable(false);
+		puntuak_2.setText(Jokoa.getJokoa().lortuPuntuak(2));
+		panel.add(puntuak_2);
+		
+		JButton feed = new JButton("Feed");
+		feed.setBounds(980,45,75,75);
+		feed.setVisible(true);
+		panel.add(feed);
+		feed.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
 		
 		setVisible(true);
 	}

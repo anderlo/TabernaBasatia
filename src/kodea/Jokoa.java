@@ -99,4 +99,23 @@ public class Jokoa extends Observable { //Inplementatu behar
 			kamaleoiaJokatu = false;
 		}
 	}
+	public String lortuPuntuak(int pAukera) {
+		// TODO Auto-generated method stub
+		int emaitza = 0;
+		ArrayList<KartaAnimali> lista = Tablero.getTableroa().getBarruan().getKartak();
+		if(pAukera == 1) {
+			for (int i = 0; i < lista.size(); i++) {
+				if (lista.get(i).getKolorea().equals(("Urdina"))){
+					emaitza = emaitza + lista.get(i).animaliZenbakia();
+				}
+			}
+		}else {
+			for (int i = 0; i < lista.size(); i++) {
+				if (lista.get(i).getKolorea().equals(("Berdea"))){
+					emaitza = emaitza + lista.get(i).animaliZenbakia();
+				}
+		}
+		}
+		return String.valueOf(emaitza);
+	}
 }

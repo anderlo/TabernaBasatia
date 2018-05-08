@@ -53,4 +53,8 @@ public abstract class KartaAnimali extends Karta{
 		// TODO Auto-generated method stub
 		return egoeraBerezia;
 	}
+	
+	public String getKolorea() {
+		return this.kolore;
+	}
 }
