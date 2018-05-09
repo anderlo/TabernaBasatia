@@ -41,7 +41,7 @@ public class UIEskua extends JFrame implements Observer {
 	
 	public void uiEskuaSortu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(300, 700, 650, 190);
+		setBounds(320, 575, 650, 190);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
