@@ -150,7 +150,7 @@ public class UITablero extends JFrame implements Observer {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
+				UIFeed.main(null);
 			}
 		});
 		

@@ -2,11 +2,19 @@ package interfazeak;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.xml.bind.SchemaOutputResolver;
+
+import kodea.Tablero;
+
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.SwingConstants;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
@@ -52,12 +60,24 @@ public class UIFeed extends JFrame {
 		lblOrainArteJokatu.setBounds(10, 11, 188, 14);
 		panel.add(lblOrainArteJokatu);
 		
-		JScrollPane scrollPane = new JScrollPane();
+		JList list = new JList(Tablero.getTableroa().getFeed().toArray());
+		
+		
+		JScrollPane scrollPane = new JScrollPane(list);
 		scrollPane.setBounds(10, 36, 188, 179);
 		panel.add(scrollPane);
+		
 		
 		JButton btnAtera = new JButton("Atera");
 		btnAtera.setBounds(109, 226, 89, 23);
 		panel.add(btnAtera);
+		btnAtera.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				UIFeed.this.dispose();
+			}
+		});
 	}
 }

@@ -3,6 +3,8 @@ package kodea;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+import javax.swing.ListModel;
+
 import kartak.*;
 
 public class Tablero {
@@ -10,6 +12,7 @@ public class Tablero {
 	private ListaKartak barruan;
 	private ListaKartak kanpoan;
 	private ListaKartakTableroan jokoan;
+	private ArrayList<String> feedLista;
 	private Ostikada ostikada;
 	private ZerukoAtea zerukoatea;
 	
@@ -24,6 +27,7 @@ public class Tablero {
 		this.jokoan  		= ListaKartakTableroan.getNireListaKartakTableroan();
 		this.ostikada		= null;
 		this.zerukoatea		= null;
+		this.feedLista		= new ArrayList<String>();
 		Ostikada karta	 	= (Ostikada)   KartaFactory.getKartaFactory().createKarta("Ostikada");
 		ZerukoAtea karta2 	= (ZerukoAtea) KartaFactory.getKartaFactory().createKarta("Zerukoatea");
 		
@@ -73,6 +77,17 @@ public class Tablero {
 	}
 	public ArrayList<KartaAnimali> errekurtsiboakLortu() {
 		return(this.jokoan.errekurtsiboakLortu());
+	}
+	public void sartuJokatutakoKarta(Jokalari pJokalari, String pKarta) {
+		if (pJokalari instanceof Pertsona) {
+			feedLista.add("(Urdina) "+pKarta);
+		}else {
+			feedLista.add("(Berdea) "+pKarta);
+		}
+		
+	}
+	public ArrayList<String> getFeed(){
+		return this.feedLista;
 	}
 
 }
