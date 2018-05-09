@@ -116,33 +116,31 @@ public class UITablero extends JFrame implements Observer {
 		panel.add(lblTokatuZaizu);
 		
 		JLabel nirePuntuak = new JLabel("Nire Puntuak");
-		nirePuntuak.setBounds(70,10,75,40);
+		nirePuntuak.setBounds(20,35,85,20);
 		nirePuntuak.setVisible(true);
 		panel.add(nirePuntuak);
 		
 		JTextField puntuak = new JTextField();
-		puntuak.setBounds(100, 25, 50, 50);
-		puntuak.setBorder(null);
+		puntuak.setBounds(110, 35, 75, 20);
 		puntuak.setVisible(true);
 		puntuak.setEditable(false);
 		puntuak.setText(Jokoa.getJokoa().lortuPuntuak(1));
 		panel.add(puntuak);
 		
 		JLabel berePuntuak = new JLabel("Bere Puntuak");
-		berePuntuak.setBounds(70,60,80,40);
+		berePuntuak.setBounds(20,85,85,20);
 		berePuntuak.setVisible(true);
 		panel.add(berePuntuak);
 		
 		JTextField puntuak_2 = new JTextField();
-		puntuak_2.setBounds(100, 75, 50, 50);
-		puntuak_2.setBorder(null);
+		puntuak_2.setBounds(110, 85, 75, 20);
 		puntuak_2.setVisible(true);
 		puntuak_2.setEditable(false);
 		puntuak_2.setText(Jokoa.getJokoa().lortuPuntuak(2));
 		panel.add(puntuak_2);
 		
 		JButton feed = new JButton("Feed");
-		feed.setBounds(980,45,75,75);
+		feed.setBounds(75,140,75,75);
 		feed.setVisible(true);
 		panel.add(feed);
 		feed.addActionListener(new ActionListener() {
