@@ -84,22 +84,26 @@ public class UIKameleoi extends JFrame {
 					ka.aldatuEgoeraBerezia();
 					kN.setKarta(ka);
 					Jokoa.getJokoa().kamaleoiEgoera();
-					kN.getKarta().animaladaBurutu();
+					boolean bigarrenInterfazea=kN.getKarta().animaladaBurutu();
 					UIEskua.getUIEskua().setEnabled(true);
 					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
-					try {
-						Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
-					} catch (Exception e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+					if(bigarrenInterfazea) {
+						try {
+							Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						Jokoa.getJokoa().aldatuta();
+						if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
+							Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
+						}
+						Jokoa.getJokoa().aldatuta();
 					}
-					Jokoa.getJokoa().aldatuta();
-					if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
-						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
-					}
-					Jokoa.getJokoa().aldatuta();
+
 				}
+
 			});
 			
 			JButton btnNewButton_1 = new JButton(kartak.get(1).getIzena());
@@ -115,22 +119,26 @@ public class UIKameleoi extends JFrame {
 					ka.aldatuEgoeraBerezia();
 					kN.setKarta(ka);
 					Jokoa.getJokoa().kamaleoiEgoera();
-					kN.getKarta().animaladaBurutu();
+					boolean bigarrenInterfazea=kN.getKarta().animaladaBurutu();
 					UIEskua.getUIEskua().setEnabled(true);
 					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
-					try {
-						Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
-					} catch (Exception e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+					if(bigarrenInterfazea) {
+						try {
+							Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						Jokoa.getJokoa().aldatuta();
+						if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
+							Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
+						}
+						Jokoa.getJokoa().aldatuta();
 					}
-					Jokoa.getJokoa().aldatuta();
-					if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
-						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
-					}
-					Jokoa.getJokoa().aldatuta();
+
 				}
+
 			});
 			
 			JButton btnNewButton_2 = new JButton(kartak.get(2).getIzena());
@@ -146,22 +154,26 @@ public class UIKameleoi extends JFrame {
 					ka.aldatuEgoeraBerezia();
 					kN.setKarta(ka);
 					Jokoa.getJokoa().kamaleoiEgoera();
-					kN.getKarta().animaladaBurutu();
+					boolean bigarrenInterfazea=kN.getKarta().animaladaBurutu();
 					UIEskua.getUIEskua().setEnabled(true);
 					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
-					try {
-						Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
-					} catch (Exception e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+					if(bigarrenInterfazea) {
+						try {
+							Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						Jokoa.getJokoa().aldatuta();
+						if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
+							Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
+						}
+						Jokoa.getJokoa().aldatuta();
 					}
-					Jokoa.getJokoa().aldatuta();
-					if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
-						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
-					}
-					Jokoa.getJokoa().aldatuta();
+
 				}
+
 			});
 			
 			JButton btnNewButton_3 = new JButton(kartak.get(3).getIzena());
@@ -177,21 +189,24 @@ public class UIKameleoi extends JFrame {
 					ka.aldatuEgoeraBerezia();
 					kN.setKarta(ka);
 					Jokoa.getJokoa().kamaleoiEgoera();
-					kN.getKarta().animaladaBurutu();
+					boolean bigarrenInterfazea=kN.getKarta().animaladaBurutu();
 					UIEskua.getUIEskua().setEnabled(true);
 					UITablero.getTableroa().setEnabled(true);
 					UIKameleoi.this.dispose();
-					try {
-						Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
-					} catch (Exception e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
+					if(bigarrenInterfazea) {
+						try {
+							Jokoa.getJokoa().kartaErrekurtsiboakAktibatu();
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						Jokoa.getJokoa().aldatuta();
+						if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
+							Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
+						}
+						Jokoa.getJokoa().aldatuta();
 					}
-					Jokoa.getJokoa().aldatuta();
-					if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
-						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
-					}
-					Jokoa.getJokoa().aldatuta();
+
 				}
 			});
 			
