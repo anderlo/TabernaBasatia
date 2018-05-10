@@ -55,6 +55,8 @@ public class Jokoa extends Observable { //Inplementatu behar
 	}
 	public void kartaJokatu(String izena) throws Exception {
 		// TODO Auto-generated method stub
+		boolean amaituta = false;
+		int kont = 0;
 		boolean jokatuta = getJokalariak().getTurnoaDuenJokalaria().jokatuKarta(izena);
 		Tablero.getTableroa().sartuJokatutakoKarta(getJokalariak().getTurnoaDuenJokalaria(), izena);
 		aldatuta();
@@ -67,6 +69,22 @@ public class Jokoa extends Observable { //Inplementatu behar
 			}
 			aldatuta();
 		}
+		if (jokalariak.getTurnoaDuenJokalaria().getEskua().kopurua() == 0 && kont == 0) {
+			kont = kont +1;
+			jokalariak.turnoaPasatu();
+		}else if (jokalariak.getTurnoaDuenJokalaria().getEskua().kopurua() == 0 && kont == 1) {
+			amaituta = true;
+		}else {
+			jokalariak.turnoaPasatu();
+		}
+		aldatuta();
+		if (amaituta) {
+			amaituJokoa();
+		}
+	}
+	private void amaituJokoa() {
+		// TODO Auto-generated method stub
+		
 	}
 	public void kartaErrekurtsiboakAktibatu() throws Exception {
 		// TODO Auto-generated method stub

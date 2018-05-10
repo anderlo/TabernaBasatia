@@ -33,7 +33,6 @@ public class Lehoi extends KartaAnimali{
 		boolean lehoiBatDago = false;
 		int n=0;
 		for (int i=0;(i<kartak.luzera())&&!(lehoiBatDago);i++ ) {
-			System.out.println(i);
 			if (kartak.getKartaListan(i).getKarta().getIzena().equals("Lehoi")) {
 				n++;
 				if(n==2) {
