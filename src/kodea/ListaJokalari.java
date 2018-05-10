@@ -25,6 +25,9 @@ public class ListaJokalari {
 	public Jokalari getTurnoaDuenJokalaria() {
 		return this.jokalari.get(this.turnoa);
 	}
+	public Jokalari getJokalariNormala(int pos) {
+		return this.jokalari.get(pos);
+	}
 	public int jokKop() {
 		return this.jokalari.size();
 	}

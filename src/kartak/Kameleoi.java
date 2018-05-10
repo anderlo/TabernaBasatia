@@ -1,6 +1,7 @@
 package kartak;
 
 import interfazeak.UIKameleoi;
+import kodea.ListaKartakTableroan;
 
 //El camaleón realiza la animalada de una de las especies que haya en la cola.
 //Para efectuar dicha animalada (y solo en ese caso), el camaleón adopta 
@@ -17,8 +18,12 @@ public class Kameleoi extends KartaAnimali{
 	@Override
 	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
-		UIKameleoi.main();
-		return false;
+		if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()!=1) {
+			UIKameleoi.main();
+			return false;
+		}else{
+			return true;
+		}
 	}
 
 }

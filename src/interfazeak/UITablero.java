@@ -5,9 +5,11 @@ import java.awt.Frame;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.Random;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -15,10 +17,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import interfazeak_DB.UIJokalari;
 import kartak.KartaAnimali;
 import kodea.Jokoa;
+import logika_DB.klase_Jokoa;
+import logika_DB.klase_sesioak;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -29,6 +35,9 @@ public class UITablero extends JFrame implements Observer {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private static UITablero uiTablero;
+	private klase_Jokoa KJ = new klase_Jokoa();
+	private klase_sesioak KS= new klase_sesioak();
+	private Time Hordua = KJ.lortuOrdua();
 	
 	
 	public static UITablero getTableroa() {
@@ -151,6 +160,38 @@ public class UITablero extends JFrame implements Observer {
 				UIFeed.main(null);
 			}
 		});
+		
+		JTextField hOrdua = new JTextField();
+		hOrdua.setBounds(110, 35, 75, 20);
+		hOrdua.setVisible(false);
+		hOrdua.setEditable(false);
+		hOrdua.setText(KJ.lortuOrdua().toString());
+		panel.add(hOrdua);
+		
+		JButton Amaitu = new JButton("Amaitu");
+		Amaitu.setBounds(530,140,75,35);
+		Amaitu.setVisible(Jokoa.getJokoa().partidaAmaituta());
+		panel.add(Amaitu);
+		Amaitu.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				klase_Jokoa KJ_2 = new klase_Jokoa();
+				Random rd = new Random();
+				if (Integer.parseInt(puntuak.getText())>Integer.parseInt(puntuak_2.getText())) {
+					KJ.puntuazioaPasatu(rd.nextInt(100000), "Irabazi", "Urdina",Time.valueOf(hOrdua.getText()) , KJ_2.lortuOrdua(), KS.lortuIzena(), Integer.parseInt(puntuak.getText()));
+					JOptionPane.showMessageDialog(null, "Zorionak! Irabazi duzu!");
+				}else {
+					KJ.puntuazioaPasatu(rd.nextInt(100000), "Galdu", "Urdina",Time.valueOf(hOrdua.getText()) , KJ_2.lortuOrdua(), KS.lortuIzena(), Integer.parseInt(puntuak.getText()));
+					JOptionPane.showMessageDialog(null, "Suerte gehiago hurrengoan!");
+				}
+				UIEskua.getUIEskua().dispose();
+				UITablero.this.dispose();
+				UIJokalari.main(null);
+			}
+		});
+		
 		
 		
 		setVisible(true);

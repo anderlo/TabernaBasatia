@@ -6,7 +6,7 @@ import kartak.KartaAnimali;
 
 public class Ordenagailua extends Jokalari{
 
-private void 	kartaJokatu() throws Exception {
+public void kartaJokatu() throws Exception {
 	ArrayList<Integer> posibleak = new ArrayList<Integer>();
 	if (this.getEskua().kopurua()>1){
 		for (int i = 0; i < this.getEskua().kopurua(); i++) {

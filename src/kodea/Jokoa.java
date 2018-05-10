@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 import interfazeak.UIModua;
+import interfazeak.UITablero;
 import kartak.*;
 
 public class Jokoa extends Observable { //Inplementatu behar
@@ -55,8 +56,6 @@ public class Jokoa extends Observable { //Inplementatu behar
 	}
 	public void kartaJokatu(String izena) throws Exception {
 		// TODO Auto-generated method stub
-		boolean amaituta = false;
-		int kont = 0;
 		boolean jokatuta = getJokalariak().getTurnoaDuenJokalaria().jokatuKarta(izena);
 		Tablero.getTableroa().sartuJokatutakoKarta(getJokalariak().getTurnoaDuenJokalaria(), izena);
 		aldatuta();
@@ -69,21 +68,27 @@ public class Jokoa extends Observable { //Inplementatu behar
 			}
 			aldatuta();
 		}
-		if (jokalariak.getTurnoaDuenJokalaria().getEskua().kopurua() == 0 && kont == 0) {
-			kont = kont +1;
-			jokalariak.turnoaPasatu();
-		}else if (jokalariak.getTurnoaDuenJokalaria().getEskua().kopurua() == 0 && kont == 1) {
-			amaituta = true;
-		}else {
-			jokalariak.turnoaPasatu();
-		}
+		jokalariak.turnoaPasatu();
 		aldatuta();
-		if (amaituta) {
-			amaituJokoa();
+	}
+	
+	public boolean partidaAmaituta() {
+		if (kartarikEz()) {
+			return true;
+		}else {
+			return false;
 		}
 	}
-	private void amaituJokoa() {
+	private boolean kartarikEz() {
 		// TODO Auto-generated method stub
+		Jokalari jok1 = jokalariak.getJokalariNormala(0);
+		Jokalari jok2 = jokalariak.getJokalariNormala(1);
+		if(jok1.getEskua().kopurua()==0 && jok2.getEskua().kopurua()==0) {
+			return true;
+		}else {
+			return false;
+		}
+		
 		
 	}
 	public void kartaErrekurtsiboakAktibatu() throws Exception {
