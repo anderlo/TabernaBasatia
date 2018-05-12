@@ -3,6 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="C:/Users/aoter/git/TBasatia_DB/TBasatia_DB/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.0.8-bin-g.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
