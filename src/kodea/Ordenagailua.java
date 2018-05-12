@@ -13,10 +13,10 @@ public void kartaJokatu() throws Exception {
 			if (BaiEz(this.getEskua().getKartak().get(i))) {
 				posibleak.add(i);
 			}	
-			double zenbat = (double) posibleak.size();
-			int zein = (int) (Math.random() * zenbat);
-			Jokoa.getJokoa().kartaJokatu(this.getEskua().getKartak().get(zein).getIzena());
 		}
+		double zenbat = (double) posibleak.size();
+		int zein = (int) (Math.random() * zenbat);
+		Jokoa.getJokoa().kartaJokatu(this.getEskua().getKartak().get(zein).getIzena());
 	}else{
 		Jokoa.getJokoa().kartaJokatu(this.getEskua().getKartak().get(0).getIzena());
 	}

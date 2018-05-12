@@ -100,6 +100,7 @@ public class UIKameleoi extends JFrame {
 							Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 						}
 						Jokoa.getJokoa().aldatuta();
+						UITurnoa turnoaPasa = new UITurnoa();
 					}
 
 				}
@@ -135,6 +136,7 @@ public class UIKameleoi extends JFrame {
 							Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 						}
 						Jokoa.getJokoa().aldatuta();
+						UITurnoa turnoaPasa = new UITurnoa();
 					}
 
 				}
@@ -170,6 +172,7 @@ public class UIKameleoi extends JFrame {
 							Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 						}
 						Jokoa.getJokoa().aldatuta();
+						UITurnoa turnoaPasa = new UITurnoa();
 					}
 
 				}
@@ -205,6 +208,7 @@ public class UIKameleoi extends JFrame {
 							Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 						}
 						Jokoa.getJokoa().aldatuta();
+						UITurnoa turnoaPasa = new UITurnoa();
 					}
 
 				}

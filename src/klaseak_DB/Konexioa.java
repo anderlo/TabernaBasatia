@@ -14,13 +14,13 @@ public class Konexioa {
 	
 	public Konexioa() {
 		conn = null;
-		try {
-			Class.forName(DRIVER);
-			conn = DriverManager.getConnection(URL, USER, PASSWORD);
-			
-		} catch (ClassNotFoundException | SQLException e) {
-			System.out.println("Errorea konektatzean" + e);
-		}
+//		try {
+//			Class.forName(DRIVER);
+//			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+//			
+//		} catch (ClassNotFoundException | SQLException e) {
+//			System.out.println("Errorea konektatzean" + e);
+//		}
 	}
 	
 	//Metodo hau konexioa itzultzen du

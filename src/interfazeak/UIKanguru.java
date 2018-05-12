@@ -112,6 +112,7 @@ public class UIKanguru extends JFrame {
 					Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 				}
 				Jokoa.getJokoa().aldatuta();
+				UITurnoa turnoaPasa = new UITurnoa();
 			}
 			
 		});

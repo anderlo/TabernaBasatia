@@ -92,6 +92,7 @@ public class UILoro extends JFrame {
 						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 					}
 					Jokoa.getJokoa().aldatuta();
+					UITurnoa turnoaPasa = new UITurnoa();
 				}
 			});
 			
@@ -118,6 +119,7 @@ public class UILoro extends JFrame {
 						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 					}
 					Jokoa.getJokoa().aldatuta();
+					UITurnoa turnoaPasa = new UITurnoa();
 				}
 			});
 			
@@ -144,6 +146,7 @@ public class UILoro extends JFrame {
 						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 					}
 					Jokoa.getJokoa().aldatuta();
+					UITurnoa turnoaPasa = new UITurnoa();
 				}
 			});
 			
@@ -170,6 +173,7 @@ public class UILoro extends JFrame {
 						Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 					}
 					Jokoa.getJokoa().aldatuta();
+					UITurnoa turnoaPasa = new UITurnoa();
 				}
 			});
 			setVisible(true);
