@@ -132,7 +132,7 @@ public class UIErregistroa extends JFrame {
 				UIErregistroa.this.dispose();
 			}
 		});
-		btnErregistratu.setBounds(185, 252, 89, 23);
+		btnErregistratu.setBounds(172, 252, 116, 23);
 		panel.add(btnErregistratu);
 		
 		JButton btnAtzera = new JButton("Atzera");

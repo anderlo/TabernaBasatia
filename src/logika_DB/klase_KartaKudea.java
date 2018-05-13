@@ -31,6 +31,13 @@ public class klase_KartaKudea {
 		DT.addColumn("Azalpena");
 		DT.addColumn("Originala");
 		DT.addColumn("Puntuak");
+		Object[] lerroa = new Object[5];
+		lerroa[0] = "Izena";
+		lerroa[1] = "Zenbakia";
+		lerroa[2] = "Azalpena";
+		lerroa[3] = "Originala";
+		lerroa[4] = "Puntuak";
+		DT.addRow(lerroa);
 		return DT;
 	}
 	

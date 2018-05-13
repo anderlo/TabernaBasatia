@@ -110,6 +110,9 @@ public class UISesioaHasi extends JFrame {
 							UIJokalari.main(null);
 							KS.insertDatuak(textField.getText());
 							
+						}else if(modSql.eMota(usr) == 2){
+							UIJokalari.main(null);
+							KS.insertDatuak(textField.getText());
 						}else {
 							UIAdmin.main(null);
 						}

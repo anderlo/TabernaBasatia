@@ -41,7 +41,7 @@ public class klase_Jokoa {
 			PS.setInt		(8, pPuntuak);
 			int erantzun = PS.executeUpdate();
 			if (erantzun > 0) {
-				JOptionPane.showMessageDialog(null, "Emaitza gordeta...");
+				JOptionPane.showMessageDialog(null, "Emaitza gordeta.");
 			}
 		} catch (SQLException e) {
 			System.out.println("Errorea datuak gordetzean: " + e.getMessage());

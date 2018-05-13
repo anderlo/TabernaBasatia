@@ -27,13 +27,11 @@ public class klase_JokalariKudea {
 	private DefaultTableModel setIzenburu() {
 		DT = new DefaultTableModel();
 		DT.addColumn("Nickname");
-//		DT.addColumn("Data");
-//		DT.addColumn("Izena");
-//		DT.addColumn("Abizena");
-//		DT.addColumn("Email");
-//		DT.addColumn("JUrtea");
-//		DT.addColumn("Pasahitza");
 		DT.addColumn("Mota");
+		Object[] lerroa = new Object[2];
+		lerroa[0] = "Nickname";
+		lerroa[1] = "Mota";
+		DT.addRow(lerroa);
 		return DT;
 	}
 	

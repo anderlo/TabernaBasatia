@@ -42,7 +42,7 @@ public class klase_Erregistroa {
 			PS.setString	(8, pMota);
 			int erantzun = PS.executeUpdate();
 			if (erantzun > 0) {
-				JOptionPane.showMessageDialog(null, "Erregistroa gordeta...");
+				JOptionPane.showMessageDialog(null, "Erregistroa gordeta.");
 			}
 		} catch (SQLException e) {
 			System.out.println("Errorea datuak gordetzean: " + e.getMessage());
@@ -84,8 +84,10 @@ public class klase_Erregistroa {
 	public int eMota (Jokalari pErabiltzaile) {
 		if(pErabiltzaile.getMota().equals("Jokalari")) {
 			return 1;
-		}else {
+		}else if(this.jokalariNull(pErabiltzaile)) {
 			return 2;
+		}else {
+			return 3;
 		}
 	}
 	
@@ -108,6 +110,31 @@ public class klase_Erregistroa {
 			// TODO Auto-generated catch block
 		}
 		return emaitza;
+	}
+	
+	public boolean jokalariNull(Jokalari pErabiltzaile) {
+			
+			PreparedStatement ps = null;
+			ResultSet rs = null;
+			boolean emaitza = false;
+			String sql = "SELECT MOTA FROM JOKALARI WHERE EIZENA = ?";
+			
+			try {
+				ps = K.getConnection().prepareStatement(sql);
+				ps.setString(1, pErabiltzaile.getNick());
+				rs = ps.executeQuery();
+				
+				if(rs.next()) {
+					if(rs.getString(1).equals("Null")){
+						emaitza= true;
+					}else {
+						emaitza= false;
+					}
+				}
+			}catch (SQLException e){
+				
+			}
+			return emaitza;
 	}
 
 }

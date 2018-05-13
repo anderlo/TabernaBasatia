@@ -8,7 +8,10 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import interfazeak.UIJokoa;
+import klaseak_DB.Jokalari;
+import logika_DB.klase_Erregistroa;
 import logika_DB.klase_Jokoa;
+import logika_DB.klase_sesioak;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -24,6 +27,8 @@ public class UIJokalari extends JFrame {
 
 	private JPanel contentPane;
 	private klase_Jokoa KJ = new klase_Jokoa();
+	private klase_sesioak KS = new klase_sesioak();
+	private klase_Erregistroa KE = new klase_Erregistroa();
 	/**
 	 * Launch the application.
 	 */
@@ -85,7 +90,14 @@ public class UIJokalari extends JFrame {
 		});
 		
 		JButton btnJokatu = new JButton("Jokatu");
-		btnJokatu.setBounds(174, 82, 89, 23);
+		Jokalari jok = new Jokalari();
+		jok.setNick(KS.lortuIzena());
+		if (KE.jokalariNull(jok)) {
+			btnJokatu.setVisible(false);
+		}else {
+			btnJokatu.setVisible(true);
+		}
+		btnJokatu.setBounds(164, 82, 110, 23);
 		panel.add(btnJokatu);
 		btnJokatu.addActionListener(new ActionListener() {
 			
@@ -98,7 +110,7 @@ public class UIJokalari extends JFrame {
 		});
 		
 		JButton btnRankinga = new JButton("Ranking-a");
-		btnRankinga.setBounds(174, 121, 89, 23);
+		btnRankinga.setBounds(164, 121, 110, 23);
 		panel.add(btnRankinga);
 		btnRankinga.addActionListener(new ActionListener() {
 			

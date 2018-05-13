@@ -52,7 +52,7 @@ public class klase_sesioak {
 			PS.setTime		(3, this.lortuOrdua());
 			int erantzun = PS.executeUpdate();
 			if (erantzun > 0) {
-				JOptionPane.showMessageDialog(null, "Sesioa hasita...");
+				JOptionPane.showMessageDialog(null, "Sesioa hasita.");
 			}
 		} catch (SQLException e) {
 			System.out.println("Errorea datuak gordetzean: " + e.getMessage());
