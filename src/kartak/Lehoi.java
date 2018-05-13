@@ -41,9 +41,11 @@ public class Lehoi extends KartaAnimali{
 			}
 		}
 		if (!lehoiBatDago){
+			
 			for (int i=0;(i<kartak.luzera()-1);i++ ) {
 				if (kartak.getKartaListan(i).getKarta().getIzena().equals("Tximino")) {
 					bota.tablerotikAtera(i);
+					i--;
 				}
 			}
 			ordenatu.ordenatu(kartak.luzera()-1, kartak.luzera()-1);
