@@ -13,6 +13,7 @@ import kartak.KartaAnimali;
 import kartak.KartaFactory;
 import kartak.OrdenatuNormala;
 import kodea.Jokoa;
+import kodea.Ordenagailua;
 
 import javax.swing.JButton;
 
@@ -37,7 +38,8 @@ public class UITurnoa extends JFrame {
 				// TODO Auto-generated method stub
 				Jokoa.getJokoa().getJokalariak().turnoaPasatu();
 				try {
-					Jokoa.getJokoa().getJokalariak().getTurnoaDuenJokalaria().kartaJokatu();
+					Ordenagailua jok=(Ordenagailua) Jokoa.getJokoa().getJokalariak().getTurnoaDuenJokalaria();
+					jok.kartaJokatu();
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

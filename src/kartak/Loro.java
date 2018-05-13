@@ -1,6 +1,7 @@
 package kartak;
 
 import interfazeak.UILoro;
+import kodea.ListaJokalari;
 import kodea.ListaKartakTableroan;
 
 //Un loro ahuyenta a un animal en la cola, a elección del jugador, y lo coloca en 
@@ -18,13 +19,28 @@ public class Loro extends KartaAnimali{
 	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
 		boolean jokatuta = false;
-		if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
-			botaLoro.tablerotikAtera(0);
-			jokatuta = true;
-		}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
-			UILoro.main();
+		if(ListaJokalari.getNireListaJokalari().getTurnoa()==0) {
+			if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
+				botaLoro.tablerotikAtera(0);
+				jokatuta = true;
+			}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
+				UILoro.main();
+			}
+			return jokatuta;
+		}else {
+			this.animaladaBurutuIA();
+			return true;
 		}
-		return jokatuta;
+		
+		
+	}
+	public void animaladaBurutuIA() {
+		int zenbat = ListaKartakTableroan.getNireListaKartakTableroan().luzera();
+		if (zenbat==1) {
+			botaLoro.tablerotikAtera(0);
+		}else {
+			botaLoro.tablerotikAtera((int) (Math.random() * zenbat-1));
+		}
 	}
 	
 	public static Bota getBota() {

@@ -57,26 +57,27 @@ public class Jokoa extends Observable { //Inplementatu behar
 	}
 	public void kartaJokatu(String izena) throws Exception {
 		// TODO Auto-generated method stub
-		Jokalari jokalari = getJokalariak().getTurnoaDuenJokalaria();
 		boolean jokatuta = true;
 		if (jokalariak.getTurnoa()==0){
+			Jokalari jokalari = getJokalariak().getTurnoaDuenJokalaria();
 			jokatuta = jokalari.jokatuKarta(izena);
-		}else  {
-			jokatuta = ((Ordenagailua) jokalari).kartaJokatu();
+		}else {
+			Ordenagailua jokalari = (Ordenagailua) getJokalariak().getTurnoaDuenJokalaria();
+			jokalari.jokatuKarta(izena);
 		}
-		Tablero.getTableroa().sartuJokatutakoKarta(getJokalariak().getTurnoaDuenJokalaria(), izena);
 		aldatuta();
 		
 		if (jokatuta){
 			kartaErrekurtsiboakAktibatu();
 			aldatuta();
-			if(this.tablero.getJokoan().luzera()==5) {
+			if(this.tablero.getJokoan().luzera()>4) {
 				this.tablero.getJokoan().zeruaKalea();
 			}
 			aldatuta();
 			if (0==jokalariak.getTurnoa()) {
 				UITurnoa turnoaPasa = new UITurnoa();
 			}
+			aldatuta();
 		}
 	}
 	

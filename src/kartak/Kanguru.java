@@ -1,6 +1,9 @@
 package kartak;
 
+import java.util.Random;
+
 import interfazeak.UIKanguru;
+import kodea.ListaJokalari;
 import kodea.ListaKartakTableroan;
 import kodea.Tablero;
 
@@ -20,15 +23,32 @@ public class Kanguru extends KartaAnimali{
 	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
 		boolean jokatuta = false;
-		if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
-			ordenatuKanguru.ordenatu(1, 1);
-			jokatuta = true;
-		}else if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
-			UIKanguru.main();
+		if(ListaJokalari.getNireListaJokalari().getTurnoa()==0) {
+			if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
+				ordenatuKanguru.ordenatu(1, 1);
+				jokatuta = true;
+			}else if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
+				UIKanguru.main();
+			}
+			}else {
+			this.animaladaBurutuIA();
 		}
 		return jokatuta;
+
 	}
 	public static Ordenatu getOrdenatu() {
 		return ordenatuKanguru;
+	}
+	public void animaladaBurutuIA() {
+		// TODO Auto-generated method stub
+		int zenbat = ListaKartakTableroan.getNireListaKartakTableroan().luzera();
+		if(zenbat==2) {
+			ordenatuKanguru.ordenatu(zenbat-1,1);
+		}else {
+			Random rd= new Random(); 
+			int i= rd.nextInt(1)+1;
+			System.out.println(i);
+			ordenatuKanguru.ordenatu(zenbat-1,i);
+		}
 	}
 }

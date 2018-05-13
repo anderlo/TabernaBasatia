@@ -65,6 +65,7 @@ public abstract class Jokalari {
 		barajatikKartaAtera();
 		Jokoa.getJokoa().getTablero().getJokoan().gehituAnimali(new KartaNodo(karta));
 		Jokoa.getJokoa().aldatuta();
+		Tablero.getTableroa().sartuJokatutakoKarta(ListaJokalari.getNireListaJokalari().getTurnoaDuenJokalaria(), izena);
 		jokatuta = karta.animaladaBurutu();
 		
 		Jokoa.getJokoa().aldatuta();

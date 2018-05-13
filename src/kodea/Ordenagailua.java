@@ -7,6 +7,7 @@ import kartak.KartaAnimali;
 public class Ordenagailua extends Jokalari{
 
 public boolean kartaJokatu() throws Exception {
+	String izena;
 	ArrayList<Integer> posibleak = new ArrayList<Integer>();
 	if (this.getEskua().kopurua()>1){
 		for (int i = 0; i < this.getEskua().kopurua(); i++) {
@@ -16,9 +17,11 @@ public boolean kartaJokatu() throws Exception {
 		}
 		double zenbat = (double) posibleak.size();
 		int zein = (int) (Math.random() * zenbat);
-		Jokoa.getJokoa().kartaJokatu(this.getEskua().getKartak().get(zein).getIzena());
+		izena = this.getEskua().getKartak().get(zein).getIzena();
+		Jokoa.getJokoa().kartaJokatu(izena);
 	}else{
-		Jokoa.getJokoa().kartaJokatu(this.getEskua().getKartak().get(0).getIzena());
+		izena = this.getEskua().getKartak().get(0).getIzena();
+		Jokoa.getJokoa().kartaJokatu(izena);
 	}
 	return true;
 }	

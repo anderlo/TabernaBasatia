@@ -26,7 +26,7 @@ public class Krokodilo extends KartaAnimali{
 		ListaKartakTableroan tablero = ListaKartakTableroan.getNireListaKartakTableroan();
 		Boolean amaituta 	= 	false;
 		int		zenbat		= 	0;
-		int 		hasiera		=	tablero.posizioaLortu(this.path);
+		int 	hasiera		=	tablero.posizioaLortu(this.path);
 		KartaNodo	aux		=	tablero.getKartaListan(hasiera).getAurrekoa();
 		if (aux!=null){
 			while (amaituta==false) {
