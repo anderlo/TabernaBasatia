@@ -70,5 +70,4 @@ public abstract class Jokalari {
 		Jokoa.getJokoa().aldatuta();
 		return jokatuta;
 	}
-	public void kartaJokatu() throws Exception {};
 }

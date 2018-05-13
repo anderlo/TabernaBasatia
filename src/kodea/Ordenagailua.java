@@ -6,7 +6,7 @@ import kartak.KartaAnimali;
 
 public class Ordenagailua extends Jokalari{
 
-public void kartaJokatu() throws Exception {
+public boolean kartaJokatu() throws Exception {
 	ArrayList<Integer> posibleak = new ArrayList<Integer>();
 	if (this.getEskua().kopurua()>1){
 		for (int i = 0; i < this.getEskua().kopurua(); i++) {
@@ -20,6 +20,7 @@ public void kartaJokatu() throws Exception {
 	}else{
 		Jokoa.getJokoa().kartaJokatu(this.getEskua().getKartak().get(0).getIzena());
 	}
+	return true;
 }	
 
 private boolean BaiEz(KartaAnimali animalia) {

@@ -57,7 +57,13 @@ public class Jokoa extends Observable { //Inplementatu behar
 	}
 	public void kartaJokatu(String izena) throws Exception {
 		// TODO Auto-generated method stub
-		boolean jokatuta = getJokalariak().getTurnoaDuenJokalaria().jokatuKarta(izena);
+		Jokalari jokalari = getJokalariak().getTurnoaDuenJokalaria();
+		boolean jokatuta = true;
+		if (jokalariak.getTurnoa()==0){
+			jokatuta = jokalari.jokatuKarta(izena);
+		}else  {
+			jokatuta = ((Ordenagailua) jokalari).kartaJokatu();
+		}
 		Tablero.getTableroa().sartuJokatutakoKarta(getJokalariak().getTurnoaDuenJokalaria(), izena);
 		aldatuta();
 		

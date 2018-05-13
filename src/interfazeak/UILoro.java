@@ -52,7 +52,7 @@ public class UILoro extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		UIEskua.getUIEskua().setEnabled(false);
 		UITablero.getTableroa().setEnabled(false);
-		setBounds(100, 100, 616, 300);
+		setBounds(100, 100, 271, 300);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -60,7 +60,7 @@ public class UILoro extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 599, 261);
+		panel.setBounds(0, 0, 258, 261);
 		contentPane.add(panel);
 		
 		ArrayList<KartaAnimali> kartak = ListaKartakTableroan.getNireListaKartakTableroan().getKartak();
@@ -70,7 +70,7 @@ public class UILoro extends JFrame {
 			panel.setLayout(null);
 			
 			JButton btnNewButton = new JButton(kartak.get(0).getIzena());
-			btnNewButton.setBounds(249, 36, 89, 23);
+			btnNewButton.setBounds(81, 36, 89, 23);
 			panel.add(btnNewButton);
 			btnNewButton.addActionListener(new ActionListener() {
 				
@@ -97,7 +97,7 @@ public class UILoro extends JFrame {
 			});
 			
 			JButton btnNewButton_1 = new JButton(kartak.get(1).getIzena());
-			btnNewButton_1.setBounds(249, 70, 89, 23);
+			btnNewButton_1.setBounds(81, 70, 89, 23);
 			panel.add(btnNewButton_1);
 			btnNewButton_1.addActionListener(new ActionListener() {
 				
@@ -124,7 +124,7 @@ public class UILoro extends JFrame {
 			});
 			
 			JButton btnNewButton_2 = new JButton(kartak.get(2).getIzena());
-			btnNewButton_2.setBounds(249, 104, 89, 23);
+			btnNewButton_2.setBounds(81, 104, 89, 23);
 			panel.add(btnNewButton_2);
 			btnNewButton_2.addActionListener(new ActionListener() {
 				
@@ -151,7 +151,7 @@ public class UILoro extends JFrame {
 			});
 			
 			JButton btnNewButton_3 = new JButton(kartak.get(3).getIzena());
-			btnNewButton_3.setBounds(249, 138, 89, 23);
+			btnNewButton_3.setBounds(81, 138, 89, 23);
 			panel.add(btnNewButton_3);
 			btnNewButton_3.addActionListener(new ActionListener() {
 				
@@ -185,7 +185,7 @@ public class UILoro extends JFrame {
 		
 		JLabel lblZeinKartaOstikada = new JLabel("Zein Karta Botako duzu?");
 		lblZeinKartaOstikada.setHorizontalAlignment(SwingConstants.CENTER);
-		lblZeinKartaOstikada.setBounds(10, 11, 578, 14);
+		lblZeinKartaOstikada.setBounds(10, 11, 237, 14);
 		panel.add(lblZeinKartaOstikada);
 		
 	}

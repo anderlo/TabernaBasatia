@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import interfazeak.UIJokoa;
+import interfazeak.UIModua;
 import klaseak_DB.Jokalari;
 import logika_DB.klase_Erregistroa;
 import logika_DB.klase_Jokoa;
@@ -104,7 +105,7 @@ public class UIJokalari extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				UIJokoa.main(null);
+				UIModua.main(null);
 				UIJokalari.this.dispose();
 			}
 		});
