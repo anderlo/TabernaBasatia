@@ -20,6 +20,8 @@ import javax.swing.border.EmptyBorder;
 import interfazeak_DB.UIJokalari;
 import kartak.KartaAnimali;
 import kodea.Jokoa;
+import kodea.Ordenagailua;
+import kodea.Tablero;
 import logika_DB.klase_Jokoa;
 import logika_DB.klase_sesioak;
 
@@ -128,6 +130,30 @@ public class UITablero extends JFrame implements Observer {
 		nirePuntuak.setBounds(20,35,85,20);
 		nirePuntuak.setVisible(true);
 		panel.add(nirePuntuak);
+		
+		JButton turnoaPasatu = new JButton("Turnoa Pasatu");
+		turnoaPasatu.setBounds(950, 50, 135, 75);
+		turnoaPasatu.setVisible(Tablero.getTableroa().getTurnoa());
+		panel.add(turnoaPasatu);
+		turnoaPasatu.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Jokoa.getJokoa().getJokalariak().turnoaPasatu();
+				try {
+					Ordenagailua jok=(Ordenagailua) Jokoa.getJokoa().getJokalariak().getTurnoaDuenJokalaria();
+					jok.kartaJokatu();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				Jokoa.getJokoa().getJokalariak().turnoaPasatu();
+				Tablero.getTableroa().turnoaAldatu();
+				Jokoa.getJokoa().aldatuta();
+				
+			}
+		});
 		
 		JTextField puntuak = new JTextField();
 		puntuak.setBounds(110, 35, 75, 20);

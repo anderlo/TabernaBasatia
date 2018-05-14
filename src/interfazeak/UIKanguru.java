@@ -12,6 +12,7 @@ import javax.swing.border.EmptyBorder;
 import kartak.Kanguru;
 import kodea.Jokoa;
 import kodea.ListaKartakTableroan;
+import kodea.Tablero;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -111,8 +112,9 @@ public class UIKanguru extends JFrame {
 				if(Jokoa.getJokoa().getTablero().getJokoan().luzera()==5) {
 					Jokoa.getJokoa().getTablero().getJokoan().zeruaKalea();
 				}
+				Tablero.getTableroa().turnoaAldatu();
 				Jokoa.getJokoa().aldatuta();
-				UITurnoa turnoaPasa = new UITurnoa();
+				
 			}
 			
 		});

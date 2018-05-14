@@ -15,6 +15,7 @@ public class Tablero {
 	private ArrayList<String> feedLista;
 	private Ostikada ostikada;
 	private ZerukoAtea zerukoatea;
+	private boolean turnoa;
 	
 	public static Tablero getTableroa() {
 		// TODO Auto-generated method stub
@@ -24,6 +25,7 @@ public class Tablero {
 	private Tablero(){
 		this.barruan 		= new ListaKartak();
 		this.kanpoan 		= new ListaKartak();
+		this.turnoa			= false;
 		this.jokoan  		= ListaKartakTableroan.getNireListaKartakTableroan();
 		this.ostikada		= null;
 		this.zerukoatea		= null;
@@ -68,6 +70,16 @@ public class Tablero {
 
 	public ZerukoAtea getZerukoatea() {
 		return zerukoatea;
+	}
+	public void turnoaAldatu() {
+		if (this.turnoa) {
+			this.turnoa = false;
+		}else {
+			this.turnoa = true;
+		}
+	}
+	public boolean getTurnoa() {
+		return this.turnoa;
 	}
 	public void sartuZeruan(KartaAnimali pKarta) {
 		this.barruan.add(pKarta);

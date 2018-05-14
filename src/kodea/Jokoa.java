@@ -5,7 +5,6 @@ import java.util.Observable;
 
 import interfazeak.UIModua;
 import interfazeak.UITablero;
-import interfazeak.UITurnoa;
 import kartak.*;
 
 public class Jokoa extends Observable { //Inplementatu behar
@@ -75,7 +74,7 @@ public class Jokoa extends Observable { //Inplementatu behar
 			}
 			aldatuta();
 			if (0==jokalariak.getTurnoa()) {
-				UITurnoa turnoaPasa = new UITurnoa();
+				Tablero.getTableroa().turnoaAldatu();
 			}
 			aldatuta();
 		}
