@@ -1,6 +1,10 @@
 package kartak;
 
+import java.util.Random;
+
 import interfazeak.UIKameleoi;
+import kodea.Jokoa;
+import kodea.KartaNodo;
 import kodea.ListaJokalari;
 import kodea.ListaKartakTableroan;
 
@@ -33,7 +37,16 @@ public class Kameleoi extends KartaAnimali{
 		
 	}
 	public void animaladaBurutuIA() {
-		
+		Random rd= new Random(); 
+		if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>0) {
+			int i= rd.nextInt(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1);
+			KartaAnimali ka=KartaFactory.getKartaFactory().createKarta(Jokoa.getJokoa().getJokalariak().getKolorea(), KartaFactory.getKartaFactory().lortuZenb(ListaKartakTableroan.getNireListaKartakTableroan().getKartaListan(i).getKarta().izena));
+			ka.aldatuEgoeraBerezia();
+			KartaNodo kn=ListaKartakTableroan.getNireListaKartakTableroan().getKartaListan(ListaKartakTableroan.getNireListaKartakTableroan().luzera()-1);
+			kn.setKarta(ka);
+			Jokoa.getJokoa().kamaleoiEgoera();
+			kn.getKarta().animaladaBurutu();
+		}
 	}
 
 }

@@ -28,10 +28,13 @@ public class Kanguru extends KartaAnimali{
 				ordenatuKanguru.ordenatu(1, 1);
 				jokatuta = true;
 			}else if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
-				UIKanguru.main();
+				jokatuta=UIKanguru.main();
+			}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()==1) {
+				jokatuta=true;
 			}
-			}else {
+		}else {
 			this.animaladaBurutuIA();
+			jokatuta=true;
 		}
 		return jokatuta;
 
@@ -44,7 +47,7 @@ public class Kanguru extends KartaAnimali{
 		int zenbat = ListaKartakTableroan.getNireListaKartakTableroan().luzera();
 		if(zenbat==2) {
 			ordenatuKanguru.ordenatu(zenbat-1,1);
-		}else {
+		}else if(zenbat>2){
 			Random rd= new Random(); 
 			int i= rd.nextInt(1)+1;
 			System.out.println(i);
