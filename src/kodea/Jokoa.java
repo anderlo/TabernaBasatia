@@ -89,9 +89,7 @@ public class Jokoa extends Observable { //Inplementatu behar
 	}
 	private boolean kartarikEz() {
 		// TODO Auto-generated method stub
-		Jokalari jok1 = jokalariak.getJokalariNormala(0);
-		Jokalari jok2 = jokalariak.getJokalariNormala(1);
-		if(jok1.getEskua().kopurua()==0 && jok2.getEskua().kopurua()==0) {
+		if(jokalariak.getTurnoaDuenJokalaria().getEskua().kopurua() == 0) {
 			return true;
 		}else {
 			return false;

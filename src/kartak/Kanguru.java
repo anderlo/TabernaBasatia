@@ -29,6 +29,7 @@ public class Kanguru extends KartaAnimali{
 				jokatuta = true;
 			}else if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
 				jokatuta=UIKanguru.main();
+				Tablero.getTableroa().turnoaAldatu();
 			}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()==1) {
 				jokatuta=true;
 			}
