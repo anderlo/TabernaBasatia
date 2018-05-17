@@ -36,11 +36,11 @@ public class Krokodilo extends KartaAnimali{
 					amaituta=true;
 				}
 				
-				if (aux.getHurrengoa()==null) {
+				if (aux.getAurrekoa()==null) {
 					amaituta=true;
 				}
 				
-				aux=aux.getHurrengoa();
+				aux=aux.getAurrekoa();
 			}
 			this.bota.tablerotikAtera(hasiera,zenbat);
 		}

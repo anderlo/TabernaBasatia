@@ -38,6 +38,8 @@ public class Tximino extends KartaAnimali{
 					bota.tablerotikAtera(i);
 				}
 			}
+			non=tablero.posizioakLortu("Tximino");
+			System.out.println(non.size());
 			for (int x = 0; x < non.size(); x++) {
 				this.ordenatu.ordenatu(non.get(x)+x,non.get(x));
 			}
