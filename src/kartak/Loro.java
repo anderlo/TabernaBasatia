@@ -25,7 +25,6 @@ public class Loro extends KartaAnimali{
 			if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
 				botaLoro.tablerotikAtera(0);
 				jokatuta = true;
-				Tablero.getTableroa().turnoaAldatu();
 				Jokoa.getJokoa().aldatuta();
 			}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
 				UILoro.main();

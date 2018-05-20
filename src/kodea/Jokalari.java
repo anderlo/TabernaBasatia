@@ -66,7 +66,12 @@ public abstract class Jokalari {
 		Jokoa.getJokoa().getTablero().getJokoan().gehituAnimali(new KartaNodo(karta));
 		Jokoa.getJokoa().aldatuta();
 		Tablero.getTableroa().sartuJokatutakoKarta(ListaJokalari.getNireListaJokalari().getTurnoaDuenJokalaria(), izena);
-		jokatuta = karta.animaladaBurutu();
+		if(!karta.errekurtsiboaDa()) {
+			jokatuta = karta.animaladaBurutu();
+		}else {
+			jokatuta=true;
+		}
+		
 		
 		Jokoa.getJokoa().aldatuta();
 		return jokatuta;
