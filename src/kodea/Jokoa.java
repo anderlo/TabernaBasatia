@@ -24,6 +24,9 @@ public class Jokoa extends Observable { //Inplementatu behar
 		}
 		return nJokoa;
 	}
+	public void Hustu() {
+		nJokoa=null;
+	}
 	public void hasieratuJokoa(boolean pKonpetitiboa, ArrayList<Integer> pHautatuak) {
 	Pertsona jokalari1 	= 				new Pertsona();
 	jokalari1.barajanSartu(ListaKartakFactory.getListaKartaFactory().createListak("Urdina"), pKonpetitiboa, pHautatuak);

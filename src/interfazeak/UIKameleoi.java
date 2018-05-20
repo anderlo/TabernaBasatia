@@ -1,4 +1,4 @@
-package interfazeak;
+	package interfazeak;
 
 import java.awt.EventQueue;
 import java.awt.Image;

@@ -24,14 +24,18 @@ public class Kameleoi extends KartaAnimali{
 	public boolean animaladaBurutu() {
 		// TODO Auto-generated method stub
 		if(ListaJokalari.getNireListaJokalari().getTurnoa()==0) {
-			if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()!=1) {
+			if(ListaKartakTableroan.getNireListaKartakTableroan().getKartaListan(0).getKarta().izena.equals("Kameleoi") && ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
+				return true;
+			}else if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()>1) {
 				UIKameleoi.main();
 				return false;
 			}else{
 				return true;
 			}
 		}else {
-			this.animaladaBurutuIA();
+			if(!ListaKartakTableroan.getNireListaKartakTableroan().getKartaListan(0).getKarta().izena.equals("Kameleoi") && ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
+				this.animaladaBurutuIA();
+			}
 			return true;
 		}
 		

@@ -31,6 +31,9 @@ public class UIKonpetitiboa extends JFrame {
 		}
 		return nKonpetitiboa;
 	}
+	public void hustu() {
+		nKonpetitiboa=null;
+	}
 
 	/**
 	 * Create the frame.

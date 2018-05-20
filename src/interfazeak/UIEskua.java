@@ -99,4 +99,9 @@ public class UIEskua extends JFrame implements Observer {
 		uiEskuaSortu();
 	}
 
+	public void hustu() {
+		uiEskua=null;
+		
+	}
+
 }

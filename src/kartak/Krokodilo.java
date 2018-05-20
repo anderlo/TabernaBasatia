@@ -29,7 +29,7 @@ public class Krokodilo extends KartaAnimali{
 		int 	hasiera		=	tablero.posizioaLortu(this.path);
 		KartaNodo	aux		=	tablero.getKartaListan(hasiera).getAurrekoa();
 		if (aux!=null){
-			while (amaituta==false) {
+			while (!amaituta) {
 				if ((aux.getKarta().animaliZenbakia()<10)&&(aux.getKarta().getIzena()!="Zebra")){
 					zenbat++;
 				}else{
@@ -38,9 +38,10 @@ public class Krokodilo extends KartaAnimali{
 				
 				if (aux.getAurrekoa()==null) {
 					amaituta=true;
+				}else {
+					aux=aux.getAurrekoa();
 				}
-				
-				aux=aux.getAurrekoa();
+
 			}
 			this.bota.tablerotikAtera(hasiera,zenbat);
 		}

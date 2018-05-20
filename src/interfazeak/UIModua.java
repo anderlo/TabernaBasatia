@@ -35,6 +35,9 @@ public class UIModua extends JFrame {
 		}
 		return uiModua;
 	}
+	public void hustu(){
+		uiModua=null;
+	}
 	
 	private UIModua() {
 		setBounds(800, 400, 191, 238);

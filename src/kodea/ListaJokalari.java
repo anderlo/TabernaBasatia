@@ -11,6 +11,9 @@ public class ListaJokalari {
 	public void jokalariakSartu(Jokalari pJok) {
 		this.jokalari.add(pJok);
 	}
+	public void hustu() {
+		nListaJokalari=null;
+	}
 	public static ListaJokalari getNireListaJokalari() {
 		if(nListaJokalari==null) {nListaJokalari= new ListaJokalari();}
 		return nListaJokalari;

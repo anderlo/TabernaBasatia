@@ -1,8 +1,10 @@
 package kartak;
 
 import interfazeak.UILoro;
+import kodea.Jokoa;
 import kodea.ListaJokalari;
 import kodea.ListaKartakTableroan;
+import kodea.Tablero;
 
 //Un loro ahuyenta a un animal en la cola, a elección del jugador, y lo coloca en 
 //la carta «ES LO QUE HA
@@ -23,8 +25,13 @@ public class Loro extends KartaAnimali{
 			if (ListaKartakTableroan.getNireListaKartakTableroan().luzera()==2) {
 				botaLoro.tablerotikAtera(0);
 				jokatuta = true;
+				Tablero.getTableroa().turnoaAldatu();
+				Jokoa.getJokoa().aldatuta();
 			}else if(ListaKartakTableroan.getNireListaKartakTableroan().luzera()>2) {
 				UILoro.main();
+			}else {
+				Tablero.getTableroa().turnoaAldatu();
+				Jokoa.getJokoa().aldatuta();
 			}
 			return jokatuta;
 		}else {

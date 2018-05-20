@@ -20,6 +20,7 @@ import javax.swing.border.EmptyBorder;
 import interfazeak_DB.UIJokalari;
 import kartak.KartaAnimali;
 import kodea.Jokoa;
+import kodea.ListaJokalari;
 import kodea.Ordenagailua;
 import kodea.Tablero;
 import logika_DB.klase_Jokoa;
@@ -48,7 +49,9 @@ public class UITablero extends JFrame implements Observer {
 		}
 		return uiTablero;
 	}
-
+	public void hustu() {
+		uiTablero=null;
+	}
 	/**
 	 * Create the frame.
 	 */
@@ -133,7 +136,12 @@ public class UITablero extends JFrame implements Observer {
 		
 		JButton turnoaPasatu = new JButton("Turnoa Pasatu");
 		turnoaPasatu.setBounds(950, 50, 135, 75);
-		turnoaPasatu.setVisible(Tablero.getTableroa().getTurnoa());
+		if (Tablero.getTableroa().getTurnoa()) {
+			turnoaPasatu.setVisible(true);
+			UIEskua.getUIEskua().setEnabled(false);
+		}else {
+			turnoaPasatu.setVisible(false);
+		}
 		panel.add(turnoaPasatu);
 		turnoaPasatu.addActionListener(new ActionListener() {
 			
@@ -150,6 +158,7 @@ public class UITablero extends JFrame implements Observer {
 				}
 				Jokoa.getJokoa().getJokalariak().turnoaPasatu();
 				Tablero.getTableroa().turnoaAldatu();
+				UIEskua.getUIEskua().setEnabled(true);
 				Jokoa.getJokoa().aldatuta();
 				
 			}
@@ -214,6 +223,11 @@ public class UITablero extends JFrame implements Observer {
 				}
 				UIEskua.getUIEskua().dispose();
 				UITablero.this.dispose();
+				UITablero.getTableroa().hustu();
+				UIModua.getUIModua().hustu();
+				UIEskua.getUIEskua().hustu();
+				ListaJokalari.getNireListaJokalari().hustu();
+				UIKonpetitiboa.getKonpetitiboa().hustu();
 				UIJokalari.main(null);
 			}
 		});
